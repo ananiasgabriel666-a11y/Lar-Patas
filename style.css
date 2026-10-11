@@ -1,0 +1,93 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #fff6ef; /* igual ao fundo da imagem */
+  background-image: url("Midias/home/osso.png"), url("Midias/home/osso.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-size: auto 120%, auto 120%;
+  background-attachment: fixed, fixed;  
+}
+
+
+.banner {
+    position: relative;
+    max-width: 1900px;
+    margin: auto;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+/*logo*/
+.topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 30px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff6ef;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.menu a:hover {
+    color: #34211c;
+}
+
+.parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.parceiros img {
+    height: 100px;
+    width: auto;
+}
+
+.parceiros img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.parceiroa h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #34211c;
+    font-size: 30px;
+}
+
+.parceiros p {
+    text-align: center;
+    margin-top: 10px;
+    color: #34211c;
+    font-size: 18px;
+}
