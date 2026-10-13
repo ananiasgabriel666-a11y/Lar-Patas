@@ -1,5 +1,8 @@
+
 /* ===== CARROSSÉIS AUTOMÁTICOS ===== */
+
 document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
+
     const track = carrossel.querySelector(".carrossel-track");
     const viewport = carrossel.querySelector(".carrossel-viewport");
     const dotsBox = carrossel.querySelector(".carrossel-dots");
@@ -10,12 +13,17 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
     if (!slides.length) return;
 
     const intervalo = Number(carrossel.dataset.autoplay) || 4000;
+
     const isHistorias = carrossel.classList.contains("carrossel-historias");
-    const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const reduzirMovimento = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
     let atual = 0;
     let timer = null;
 
+    /* Quantidade de imagens visíveis */
     function visiveis() {
         if (isHistorias && window.innerWidth > 768) {
             return 2;
@@ -23,12 +31,15 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         return 1;
     }
 
+    /* Última posição permitida */
     function maxIndice() {
         return Math.max(0, slides.length - visiveis());
     }
 
+    /* Criar bolinhas */
     const dots = slides.map((_, i) => {
         const dot = document.createElement("button");
+
         dot.type = "button";
         dot.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
 
@@ -38,10 +49,13 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         });
 
         if (dotsBox) dotsBox.appendChild(dot);
+
         return dot;
     });
 
+    /* Movimentar carrossel */
     function ir(indice) {
+
         const max = maxIndice();
 
         if (indice > max) {
@@ -52,15 +66,23 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
             atual = indice;
         }
 
-        const deslocamento = slides[atual].offsetLeft - slides[0].offsetLeft;
+        const deslocamento =
+            slides[atual].offsetLeft - slides[0].offsetLeft;
+
         track.style.transform = `translateX(-${deslocamento}px)`;
 
+        /* Atualizar bolinhas */
         dots.forEach((dot, i) => {
-            dot.setAttribute("aria-current", String(i === atual));
+            dot.setAttribute(
+                "aria-current",
+                String(i === atual)
+            );
+
             dot.hidden = i > max;
         });
     }
 
+    /* Controle automático */
     function iniciar() {
         if (reduzirMovimento || timer || maxIndice() === 0) return;
 
@@ -79,6 +101,7 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         iniciar();
     }
 
+    /* Botões anterior e próximo */
     carrossel.querySelector(".prev")?.addEventListener("click", () => {
         ir(atual - 1);
         reiniciar();
@@ -89,8 +112,11 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         reiniciar();
     });
 
+    /* Pausar ao passar o mouse */
     carrossel.addEventListener("mouseenter", parar);
     carrossel.addEventListener("mouseleave", iniciar);
+
+    /* Pausar ao receber foco */
     carrossel.addEventListener("focusin", parar);
 
     carrossel.addEventListener("focusout", (e) => {
@@ -99,6 +125,7 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         }
     });
 
+    /* Navegação por toque */
     let inicioX = 0;
 
     carrossel.addEventListener("touchstart", (e) => {
@@ -116,21 +143,29 @@ document.querySelectorAll("[data-carrossel]").forEach((carrossel) => {
         iniciar();
     });
 
+    /* Ajustar ao redimensionar */
     window.addEventListener("resize", () => {
         ir(Math.min(atual, maxIndice()));
     });
 
+    /* Inicialização */
     ir(0);
     iniciar();
 });
 
+
 /* ===== FAIXA DE PARCEIROS ===== */
+
 document.querySelectorAll(".marquee-track").forEach((track) => {
+
     Array.from(track.children).forEach((li) => {
+
         const copia = li.cloneNode(true);
+
         copia.setAttribute("aria-hidden", "true");
 
         const imagem = copia.querySelector("img");
+
         if (imagem) {
             imagem.alt = "";
         }
@@ -139,62 +174,83 @@ document.querySelectorAll(".marquee-track").forEach((track) => {
     });
 });
 
+
 /* ===== ANO DO RODAPÉ ===== */
+
 const ano = document.getElementById("ano");
 
 if (ano) {
     ano.textContent = new Date().getFullYear();
 }
 
+
 /* ===== ANIMAÇÃO DOS NÚMEROS ===== */
+
 const numeros = document.querySelectorAll(".stat-num");
 
-if (numeros.length) {
-    const observador = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-            if (!entrada.isIntersecting) return;
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (!entrada.isIntersecting) return;
 
-            const elemento = entrada.target;
-            const valorFinal = Number(elemento.dataset.target);
-            const duracao = 2000;
+        const elemento = entrada.target;
+        const valorFinal = Number(elemento.dataset.target);
+        const duracao = 2000; // 2 segundos
 
-            let inicio = null;
+        let inicio = null;
 
-            function animar(tempo) {
-                if (inicio === null) inicio = tempo;
+        function animar(tempo) {
+            if (inicio === null) inicio = tempo;
 
-                const progresso = Math.min((tempo - inicio) / duracao, 1);
-                const suavizacao = 1 - Math.pow(1 - progresso, 3);
-                const valorAtual = Math.floor(suavizacao * valorFinal);
+            const progresso = Math.min(
+                (tempo - inicio) / duracao,
+                1
+            );
 
-                elemento.textContent = valorAtual + "+";
+            // Desacelera perto do valor final
+            const suavizacao = 1 - Math.pow(1 - progresso, 3);
 
-                if (progresso < 1) {
-                    requestAnimationFrame(animar);
-                } else {
-                    elemento.textContent = valorFinal + "+";
-                }
+            const valorAtual = Math.floor(
+                suavizacao * valorFinal
+            );
+
+            elemento.textContent = valorAtual + "+";
+
+            if (progresso < 1) {
+                requestAnimationFrame(animar);
+            } else {
+                elemento.textContent = valorFinal + "+";
             }
+        }
 
-            requestAnimationFrame(animar);
-            observador.unobserve(elemento);
-        });
-    }, {
-        threshold: 0.5
-    });
+        requestAnimationFrame(animar);
 
-    numeros.forEach((numero) => {
-        observador.observe(numero);
+        // Executa apenas uma vez
+        observador.unobserve(elemento);
     });
-}
+}, {
+    threshold: 0.5
+});
+
+numeros.forEach((numero) => {
+    observador.observe(numero);
+});
+
 
 /* ===== MENU HAMBÚRGUER ===== */
+
 const botaoMenu = document.querySelector(".menu-toggle");
 const menu = document.querySelector("#menu-principal");
 
 if (botaoMenu && menu) {
+
     botaoMenu.addEventListener("click", () => {
+
+        // Abre ou fecha o menu
         const aberto = menu.classList.toggle("ativo");
+
+        // Atualiza o estado do botão
         botaoMenu.setAttribute("aria-expanded", String(aberto));
+
     });
+
 }

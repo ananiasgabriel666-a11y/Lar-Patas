@@ -1,7 +1,6 @@
 /* ===== Tokens (cores e fontes do protótipo) ===== */
 :root {
     --petroleo: #0f4c5c;
-    --laranja: #f28c0f;
     --pessego:  #f7d9ae;
     --laranja: #f28c0f;
     --amarelo: #ffda13;
@@ -9,8 +8,6 @@
     --creme-escuro: #f3e3c3;
     --marrom: #3b2a20;
     --branco: #fffdf9;
-    --fonte-titulo: "Poppins", sans-serif;
-    --fonte-texto: "Open Sans", sans-serif;
     --raio: 16px;
     --sombra: 0px 6px 6px rgba(18, 75, 92, 0.12);
     --fonte-titulo: "Fredoka", sans-serif;
@@ -24,12 +21,6 @@ body{margin: 0;   padding: 0; width: 100%;
 
 * { box-sizing: border-box; }
 
-body {
-    margin: 0;
-    background: var(--creme);
-    color: var(--marrom);
-    font-family: var(--fonte-texto);
-    line-height: 1.6;
 
 body {
     background: url("Midias/home/osso.png") left top / 539px auto repeat-y,
@@ -41,59 +32,6 @@ body {
 img { max-width: 100%; display: block; }
 h1, h2 { font-family: var(--fonte-titulo); color: var(--petroleo); font-weight: 600; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--laranja); outline-offset: 2px; }
-
-/* ===== Topo ===== */
-.topo {
-    position: sticky; top: 0; z-index: 50;
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    padding: 12px 32px;
-    background: var(--branco);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .08);
-}
-.logo img { height: 52px; width: auto; }
-
-.menu ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
-.menu a {
-    position: relative; display: block; padding-bottom: 8px;
-    font-family: var(--fonte-titulo); font-size: .8rem; font-weight: 500;
-    color: var(--petroleo); text-decoration: none;
-}
-.menu a:hover { color: var(--laranja); }
-.menu a[aria-current="page"] { color: var(--laranja); }
-.menu a[aria-current="page"]::after {
-    content: ""; position: absolute; left: 50%; bottom: 0;
-    width: 4px; height: 4px; border-radius: 50%;
-    background: var(--laranja); transform: translateX(-50%);
-}
-
-.topo-acoes { display: flex; align-items: center; gap: 20px; }
-.link-perfil {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--fonte-titulo); font-size: .8rem; font-weight: 500;
-    color: var(--petroleo); text-decoration: none;
-}
-.btn-entrar {
-    padding: 8px 20px; border: 1.5px solid var(--laranja); border-radius: 999px;
-    font-family: var(--fonte-titulo); font-size: .8rem; font-weight: 600;
-    color: var(--petroleo); text-decoration: none; transition: background .2s, color .2s;
-}
-.btn-entrar:hover { background: var(--laranja); color: #fff; }
-
-/* ===== Banner ===== */
-.banner img { width: 100%; height: auto; }
-
-/* ===== Bem-vindo (cartão creme) ===== */
-.boas-vindas {
-    position: relative;
-    display: flex; align-items: center; gap: 48px;
-    max-width: 1100px; margin: -24px auto 0; padding: 40px 56px;
-    background: var(--branco);
-    border-radius: 24px;
-    box-shadow: 0 12px 32px rgba(59, 42, 32, .1);
-}
-.boas-vindas-icone { width: 90px; height: 90px; flex-shrink: 0; }
-.boas-vindas h2 { margin: 0 0 8px; font-size: 1.6rem; font-weight: 700; }
-.boas-vindas p { margin: 0; font-size: .9rem; }
 
 /*==== conteudo principal ====*/
 main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; background-color: var(--creme);
@@ -200,6 +138,7 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
     text-align: center; font-size: 1.5rem; margin-bottom: 20px;
 }
 
+
 /* ===== Seções ===== */
 .secao { max-width: 1100px; margin: 0 auto; padding: 72px 24px 24px; }
 .secao-titulo { text-align: center; margin-bottom: 32px; }
@@ -215,14 +154,13 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
 .btn-laranja:hover { background: #d97a05; transform: translateY(-2px); }
 
 
+
 /* ===== Carrossel (passa sozinho) ===== */
 .carrossel { position: relative; padding: 0 56px 36px; }
 .carrossel-viewport { overflow: hidden; border-radius: 20px; }
 .carrossel-track { display: flex; transition: transform .6s ease; }
 .carrossel .slide { flex: 0 0 100%; margin: 0; }
 .carrossel .slide img { width: 100%; height: auto; border-radius: 20px; }
-
-.carrossel-historias { max-width: 760px; margin: 0 auto; }
 
 /*==== historias ====*/
 .carrossel-historias { max-width: 1100px; margin: 0 auto; }
@@ -266,48 +204,18 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
 .vitrine {
     display: flex; align-items: center; justify-content: space-between; gap: 32px;
     max-width: 1100px; margin: 56px auto 0; padding: 40px 56px;
-    background: var(--petroleo); color: #fff; border-radius: 24px;
-}
-.vitrine h2 { color: #fff; font-size: 1.8rem; font-weight: 700; }
-.vitrine p { max-width: 460px; font-size: .95rem; }
-.vitrine img { width: 220px; flex-shrink: 0; }
-
     background: var(--petroleo); color: #fff; border-radius: 24px;}
 
 .vitrine h2 { color: #fff; font-size: 1.8rem; font-weight: 700; }
 .vitrine p { max-width: 460px; font-size: .95rem; }
 .vitrine img { width: 720px; flex-shrink: 0; }
 
-
 /* ===== Aviso ===== */
 .aviso {
     display: flex; align-items: center; justify-content: center; gap: 24px;
-    max-width: 1100px; margin: 56px auto 0; padding: 24px 32px;
-    background: var(--creme-escuro); border-radius: 24px;}
-
-.aviso img { width: 90px; }
-.aviso h2 { font-size: 1.4rem; margin: 0 0 4px; }
-.aviso p { margin: 0; font-size: .9rem; }
-
-/* ===== Parceiros (faixa contínua) ===== */
-.secao-parceiros { max-width: none; padding-bottom: 96px; }
-.marquee { overflow: hidden; padding: 8px 0; }
-.marquee-track {
-    display: flex; gap: 16px; width: max-content;
-    margin: 0; padding: 0; list-style: none;
-    animation: passar 28s linear infinite;
-}
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track li {
-    display: flex; align-items: center; justify-content: center;
-    width: 210px; height: 78px; padding: 12px 20px;
-    background: var(--branco); border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(59, 42, 32, .08);
-}
-.marquee-track img { max-height: 100%; width: auto; object-fit: contain;
     max-width: 1200px; margin: 56px auto 0; padding: 24px 32px;
-    background: var(--pessego); border-radius: var(--raio);}
-
+    background: var(--pessego); border-radius: var(--raio);
+}
 .aviso img { width: 720px; }
 .aviso h2 { font-size: 2.5rem; margin: 0 0 4px; }
 .aviso p { margin: 0; font-size: 1.2rem; }
@@ -336,39 +244,9 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
 }
 .marquee-track img {max-width: 100%; max-height: 100%; width: auto; object-fit: contain; }
 
-
 @keyframes passar { to { transform: translateX(calc(-50% - 8px)); } }
 
 /* ===== Rodapé ===== */
-
-.rodape {
-    position: relative;
-    background: var(--petroleo); color: #fff;
-    padding: 72px 32px 24px;
-    border-top-left-radius: 50% 28px; border-top-right-radius: 50% 28px;
-}
-.rodape-conteudo {
-    display: grid; grid-template-columns: 1fr auto auto; gap: 64px;
-    max-width: 1100px; margin: 0 auto;
-}
-.rodape-marca img { height: 64px; width: auto; margin-bottom: 12px; }
-.rodape-marca p { max-width: 240px; font-size: .8rem; }
-.rodape h2 { color: var(--laranja); font-size: .85rem; font-weight: 600; margin-bottom: 12px; }
-.rodape ul { list-style: none; margin: 0; padding: 0; }
-.rodape li { margin-bottom: 8px; }
-.rodape a { color: #fff; text-decoration: none; font-size: .8rem; }
-.rodape a:hover { color: var(--laranja); }
-
-.redes { display: flex; gap: 8px; margin-top: 16px; }
-.redes a {
-    display: grid; place-items: center; width: 26px; height: 26px;
-    border: 1px solid rgba(255, 255, 255, .7); border-radius: 50%; font-size: .7rem;
-}
-
-.copy {
-    max-width: 1100px; margin: 40px auto 0; padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, .2); font-size: .7rem;
-}
 .footer {  position: relative;  padding: 80px 8% 24px;  background: var(--petroleo);  color: var(--branco);}
 
 /* Onda no topo do rodapé */
@@ -400,7 +278,6 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
 .footer .copy { margin: 32px 0 0; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.8rem;}
 
-
 /* ===== Responsivo ===== */
 @media (max-width: 992px) {
     .topo { flex-wrap: wrap; justify-content: center; }
@@ -418,36 +295,40 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
     .marquee-track { animation: none; overflow-x: auto; }
 }
 
+
 /* ===== MENU HAMBÚRGUER ===== */
+
 /* Esconde o botão no computador */
-.menu-toggle { display: none;}
+.menu-toggle {
+    display: none;
+}
 
 /* Configuração para celulares */
 @media (max-width: 768px) {
 
-    .topo {display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;padding: 12px 20px;}
+    .topo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 12px 20px; }
 
     /* Mostra o botão hambúrguer */
-    .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; background: transparent;
-        border: none; cursor: pointer; padding: 10px;}
+    .menu-toggle {display: flex;   flex-direction: column;   justify-content: center;   gap: 5px;   background: transparent;
+        border: none;  cursor: pointer;  padding: 10px;}
 
     /* Desenha as três linhas */
-    .menu-toggle span { display: block; width: 26px; height: 3px; background: var(--petroleo); border-radius: 3px; }
+    .menu-toggle span {  display: block;  width: 26px;  height: 3px;  background: var(--petroleo);  border-radius: 3px;}
 
     /* Esconde o menu inicialmente */
-    .menu { display: none; width: 100%; order: 3;}
+    .menu {  display: none;  width: 100%;  order: 3;}
 
     /* Mostra o menu quando ativado */
-    .menu.ativo { display: block;}
+    .menu.ativo { display: block; }
 
     /* Organiza os links verticalmente */
-    .menu > ul {flex-direction: column;align-items: stretch;gap: 0; }
+    .menu > ul {   flex-direction: column;  align-items: stretch;  gap: 0; }
 
-    .menu > ul > li > a {padding: 12px;}
+    .menu > ul > li > a {  padding: 12px; }
 
     /* Mantém o botão ao lado da logo */
-    .menu-toggle { order: 2 }
+    .menu-toggle { order: 2; }
 
     /* Ajusta os botões de perfil */
-    .topo-acoes { order: 4; width: 100%; justify-content: center; }
+    .topo-acoes { order: 4;width: 100%; justify-content: center;}
 }
