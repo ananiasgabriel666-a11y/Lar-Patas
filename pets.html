@@ -13,12 +13,21 @@
 <body>
     <div class="page">
  
-        <header class="topo topo-interno">
+        <header class="topo">
             <a href="index.html" class="logo">
-                <img src="Midias/home/logo.png" alt="Lar&amp;Patas">
+                <img src="Midias/home/logo.png" alt="Lar&amp;Patas - página inicial">
             </a>
  
-            <nav class="menu" aria-label="Menu principal">
+            <button class="menu-toggle" type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menu-principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li class="tem-submenu">
@@ -42,14 +51,16 @@
                         </ul>
                     </li>
                     <li><a href="contato.html">Fale Conosco</a></li>
-                    <li class="tem-submenu">
-                        <a href="login.html">Entrar/Cadastrar</a>
-                        <ul class="submenu">
-                            <li><a href="perfil.html">Meu Perfil<span class="submenu-desc">Acompanhe seus pedidos</span></a></li>
-                        </ul>
-                    </li>
                 </ul>
             </nav>
+
+            <div class="topo-acoes">
+                <a class="perfil-link" href="perfil.html">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                    Perfil
+                </a>
+                <a class="botao botao-contorno" href="login.html">Entrar / Cadastrar</a>
+            </div>
         </header>
  
         <main>
