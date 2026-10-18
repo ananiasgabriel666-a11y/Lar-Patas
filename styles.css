@@ -612,3 +612,40 @@ a.contato-canal:hover {
     .contato-form-card { padding: 24px 18px; }
     .contato-form .btn-primary { justify-self: stretch; }
 }
+
+#t-pagina {
+    color: var(--marrom);
+}
+
+/* Altera a cor dos títulos (labels) especificamente dentro do formulário de adoção */
+.mb-5 {
+    color: var(--petroleo); 
+    font-weight: 600; 
+}
+
+/* estilização da página: política de adoção */
+
+/* 1. pseudoelemento (::marker): Altera a cor e o estilo das bolinhas nas listas não ordenadas */
+.lista-politica li::marker {
+    color: #ff9800; 
+    font-size: 1.2rem;
+}
+
+/* 2. PSEUDOELEMETO (::marker): Formata os números da lista ordenada (Etapas) */
+.lista-etapas li::marker {
+    color: #0d47a1; 
+    font-weight: 700;
+}
+
+/* 3. SELETOR COMPOSTO + PSEUDOCLASSE (:hover): Efeito de transição nas responsabilidades */
+/* Quando o rato passa sobre um article dentro da secção t-resp, cria uma margem à esquerda */
+section[aria-labelledby="t-resp"] article {
+    transition: all 0.3s ease;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
+}
+
+section[aria-labelledby="t-resp"] article:hover {
+    border-left-color: #ff9800;
+    background-color: #fcfcfc;
+}
