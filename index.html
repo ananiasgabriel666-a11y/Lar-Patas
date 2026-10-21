@@ -74,159 +74,164 @@
         </div>
     </header>
 
-    <!-- Banner -->
-    <section class="banner" aria-label="Destaque">
-        <img src="Midias/home/banner.png" alt="Onde todo amigo encontra um lar. Juntando lares e patinhas.">
-    </section>
+    <!--Aplica as classes de grelha e largura responsiva -->
+    <section class="container-fluid py-4">
+        <div class="container-lg mx-auto">
+            <!-- Banner -->
+            <section class="banner" aria-label="Destaque">
+                <img src="Midias/home/banner.png" alt="Onde todo amigo encontra um lar. Juntando lares e patinhas.">
+            </section>
 
-    <main>
-        <!--Boa vindas-->
-        <section class="hero">
-        <div class="hero-texto">
-            <h1>Bem-vindo ao Lar&Patas</h1>
-            <p>
-            O Lar&Patas é uma plataforma que conecta pessoas
-            a ONGs parceiras para encontrar lares amorosos
-            para animais abandonados.
-            Encontre seu novo amigo de quatro patas!
-            </p>
+            <main>
+                <!--Boa vindas-->
+                <section class="hero">
+                <div class="hero-texto">
+                    <h1>Bem-vindo ao Lar&Patas</h1>
+                    <p>
+                    O Lar&Patas é uma plataforma que conecta pessoas
+                    a ONGs parceiras para encontrar lares amorosos
+                    para animais abandonados.
+                    Encontre seu novo amigo de quatro patas!
+                    </p>
 
-            <div class="hero-actions">
-            <a href="como-funciona.html" class="botao botao-primario">
-                Quero adotar
-            </a>
-            <a href="contato.html" class="botao botao-contorno">
-                Quero ajudar
-            </a>
-            </div>
-        </div>
-
-        <!--Como funciona (carrossel)-->
-        <div class="hero-carrossel">
-            <h2>Como Funciona a Adoção</h2>
-
-            <div class="carrossel" data-carrossel data-autoplay="4000">
-            <button class="carrossel-btn prev" type="button"
-                    aria-label="Slide anterior">&#10094;</button>
-
-            <div class="carrossel-viewport">
-                <div class="carrossel-track">
-                <figure class="slide">
-                    <img src="Midias/home/carrossel1.png" alt="Processo de adoção">
-                </figure>
-                <figure class="slide">
-                    <img src="Midias/home/carrossel2.png" alt="Gostou de algum pet?">
-                </figure>
-                <figure class="slide">
-                    <img src="Midias/home/carrossel3.png" alt="Período de espera">
-                </figure>
-                <figure class="slide">
-                    <img src="Midias/home/carrossel4.png" alt="Vitrine Pet">
-                </figure>
-                <figure class="slide">
-                    <img src="Midias/home/carrossel5.png" alt="Como ajudar">
-                </figure>
+                    <div class="hero-actions">
+                    <a href="como-funciona.html" class="botao botao-primario">
+                        Quero adotar
+                    </a>
+                    <a href="contato.html" class="botao botao-contorno">
+                        Quero ajudar
+                    </a>
+                    </div>
                 </div>
-            </div>
 
-            <button class="carrossel-btn next" type="button"
-                    aria-label="Próximo slide">&#10095;</button>
-            <div class="carrossel-dots"></div>
-            </div>
-        </div>
-        </section>
+                <!--Como funciona (carrossel)-->
+                <div class="hero-carrossel">
+                    <h2>Como Funciona a Adoção</h2>
 
- 
-        <!-- Sobre + números -->
-        <section class="section about" id="sobre" aria-labelledby="t-sobre">
-            <div class="section-head">
-                <h2 id="t-sobre">Quem somos</h2>
-                <p>O Lar&amp;Patas é uma organização dedicada a encontrar lares amorosos para animais abandonados. Nosso objetivo é conectar pessoas com animais que precisam de um lar.</p>
-            </div>
- 
-            <ul class="stats" aria-label="Nossos números">
-                <li>
-                    <span class="stat-num" data-target="469">0+</span>
-                    <span class="stat-label">Animais Adotados</span>
-                </li>
-                <li>
-                    <span class="stat-num"data-target="6">0+</span>
-                    <span class="stat-label">Instituições Parceiras</span>
-                </li>
-                <li>
-                    <span class="stat-num"data-target="75">0+</span>
-                    <span class="stat-label">Voluntários</span>
-                </li>
-                <li>
-                    <span class="stat-num"data-target="15">0+</span>
-                    <span class="stat-label">Cidades atendidas</span>
-                </li>
-            </ul>
-        </section>
- 
+                    <div class="carrossel" data-carrossel data-autoplay="4000">
+                    <button class="carrossel-btn prev" type="button"
+                            aria-label="Slide anterior">&#10094;</button>
+
+                    <div class="carrossel-viewport">
+                        <div class="carrossel-track">
+                        <figure class="slide">
+                            <img src="Midias/home/carrossel1.png" alt="Processo de adoção">
+                        </figure>
+                        <figure class="slide">
+                            <img src="Midias/home/carrossel2.png" alt="Gostou de algum pet?">
+                        </figure>
+                        <figure class="slide">
+                            <img src="Midias/home/carrossel3.png" alt="Período de espera">
+                        </figure>
+                        <figure class="slide">
+                            <img src="Midias/home/carrossel4.png" alt="Vitrine Pet">
+                        </figure>
+                        <figure class="slide">
+                            <img src="Midias/home/carrossel5.png" alt="Como ajudar">
+                        </figure>
+                        </div>
+                    </div>
+
+                    <button class="carrossel-btn next" type="button"
+                            aria-label="Próximo slide">&#10095;</button>
+                    <div class="carrossel-dots"></div>
+                    </div>
+                </div>
+                </section>
+
         
-        <!-- Vitrine -->
-        <section class="vitrine" aria-labelledby="t-vitrine">
-            <div class="vitrine-texto">
-                <h2 id="t-vitrine">Escolha seu amigo na vitrine Pet</h2>
-                <p>Veja os cães e gatos disponíveis, filtre por porte e idade e favorite os que mais combinam com você.</p>
-                <a href="conheca-pets.html" class="btn-laranja">Ver pets para adoção</a>
-            </div>
-            <img src="Midias/home/celular.png" alt="Celular mostrando o aplicativo do Lar&amp;Patas">
-        </section>
+                <!-- Sobre + números -->
+                <section class="section about" id="sobre" aria-labelledby="t-sobre">
+                    <div class="section-head">
+                        <h2 id="t-sobre">Quem somos</h2>
+                        <p>O Lar&amp;Patas é uma organização dedicada a encontrar lares amorosos para animais abandonados. Nosso objetivo é conectar pessoas com animais que precisam de um lar.</p>
+                    </div>
+        
+                    <ul class="stats" aria-label="Nossos números">
+                        <li>
+                            <span class="stat-num" data-target="469">0+</span>
+                            <span class="stat-label">Animais Adotados</span>
+                        </li>
+                        <li>
+                            <span class="stat-num"data-target="6">0+</span>
+                            <span class="stat-label">Instituições Parceiras</span>
+                        </li>
+                        <li>
+                            <span class="stat-num"data-target="75">0+</span>
+                            <span class="stat-label">Voluntários</span>
+                        </li>
+                        <li>
+                            <span class="stat-num"data-target="15">0+</span>
+                            <span class="stat-label">Cidades atendidas</span>
+                        </li>
+                    </ul>
+                </section>
+        
+                
+                <!-- Vitrine -->
+                <section class="vitrine" aria-labelledby="t-vitrine">
+                    <div class="vitrine-texto">
+                        <h2 id="t-vitrine">Escolha seu amigo na vitrine Pet</h2>
+                        <p>Veja os cães e gatos disponíveis, filtre por porte e idade e favorite os que mais combinam com você.</p>
+                        <a href="conheca-pets.html" class="btn-laranja">Ver pets para adoção</a>
+                    </div>
+                    <img src="Midias/home/celular.png" alt="Celular mostrando o aplicativo do Lar&amp;Patas">
+                </section>
 
-        <!-- Histórias de adoção (carrossel que passa sozinho) -->
-        <section class="secao" id="historias" aria-labelledby="t-historias">
-            <div class="secao-titulo">
-                <h2 id="t-historias">Histórias de Adoção</h2>
-                <p>Quem já abriu a porta de casa para um novo amigo conta como foi.</p>
-            </div>
+                <!-- Histórias de adoção (carrossel que passa sozinho) -->
+                <section class="secao" id="historias" aria-labelledby="t-historias">
+                    <div class="secao-titulo">
+                        <h2 id="t-historias">Histórias de Adoção</h2>
+                        <p>Quem já abriu a porta de casa para um novo amigo conta como foi.</p>
+                    </div>
 
-            <div class="carrossel carrossel-historias" data-carrossel data-autoplay="5000" aria-roledescription="carrossel" aria-label="Histórias de adoção">
-                <button class="carrossel-btn prev" type="button" aria-label="História anterior">&#10094;</button>
-                <div class="carrossel-viewport">
-                    <div class="carrossel-track">
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (1).png" alt="Thiago e seu novo amigo"></figure>
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (2).png" alt="Camila e seu novo amigo" loading="lazy"></figure>
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (3).png" alt="Rodrigo e seu novo amigo" loading="lazy"></figure>
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (4).png" alt="Maria e seu novo amigo" loading="lazy"></figure>
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (5).png" alt="Lucas e seu novo amigo" loading="lazy"></figure>
-                    <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (6).png" alt="Fernanda e seu novo amigo" loading="lazy"></figure>
-                </div>
-                <button class="carrossel-btn next" type="button" aria-label="Próxima história">&#10095;</button>
-                <div class="carrossel-dots" role="tablist" aria-label="Escolher história"></div>
-            </div>
-        </section>
- 
+                    <div class="carrossel carrossel-historias" data-carrossel data-autoplay="5000" aria-roledescription="carrossel" aria-label="Histórias de adoção">
+                        <button class="carrossel-btn prev" type="button" aria-label="História anterior">&#10094;</button>
+                        <div class="carrossel-viewport">
+                            <div class="carrossel-track">
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (1).png" alt="Thiago e seu novo amigo"></figure>
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (2).png" alt="Camila e seu novo amigo" loading="lazy"></figure>
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (3).png" alt="Rodrigo e seu novo amigo" loading="lazy"></figure>
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (4).png" alt="Maria e seu novo amigo" loading="lazy"></figure>
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (5).png" alt="Lucas e seu novo amigo" loading="lazy"></figure>
+                            <figure class="slide"><img src="Midias/avaliações/Maria de Lurdes (6).png" alt="Fernanda e seu novo amigo" loading="lazy"></figure>
+                        </div>
+                        <button class="carrossel-btn next" type="button" aria-label="Próxima história">&#10095;</button>
+                        <div class="carrossel-dots" role="tablist" aria-label="Escolher história"></div>
+                    </div>
+                </section>
+        
 
-        <!-- Aviso -->
-        <section class="aviso" aria-labelledby="t-aviso">
-            <img src="Midias/home/elemento.png" alt="Fique atento para adoções" loading="lazy">
-            <div>
-                <h2 id="t-aviso">Novos pets chegam toda semana</h2>
-                <p>Siga o <strong>@lar&amp;patas</strong> nas redes sociais para ver quem acabou de entrar na vitrine.</p>
-            </div>
-        </section>
+                <!-- Aviso -->
+                <section class="aviso" aria-labelledby="t-aviso">
+                    <img src="Midias/home/elemento.png" alt="Fique atento para adoções" loading="lazy">
+                    <div>
+                        <h2 id="t-aviso">Novos pets chegam toda semana</h2>
+                        <p>Siga o <strong>@lar&amp;patas</strong> nas redes sociais para ver quem acabou de entrar na vitrine.</p>
+                    </div>
+                </section>
 
-        <!-- Parceiros (faixa que passa continuamente) -->
-        <section class="secao secao-parceiros" id="parceiros" aria-labelledby="t-parceiros">
-            <div class="secao-titulo">
-                <h2 id="t-parceiros">Nossos Parceiros</h2>
-                <p>Reunimos ONGs parceiras para aproximar quem quer adotar de quem precisa de um lar.</p>
-            </div>
+                <!-- Parceiros (faixa que passa continuamente) -->
+                <section class="secao secao-parceiros" id="parceiros" aria-labelledby="t-parceiros">
+                    <div class="secao-titulo">
+                        <h2 id="t-parceiros">Nossos Parceiros</h2>
+                        <p>Reunimos ONGs parceiras para aproximar quem quer adotar de quem precisa de um lar.</p>
+                    </div>
 
-            <div class="marquee" aria-label="Parceiros do Lar&amp;Patas">
-                <ul class="marquee-track">
-                    <li><img src="Midias/home/amigo_vet.png" alt=""><span>Amigo Vet</span></li>
-                    <li><img src="Midias/home/anjos_de_focinho.png" alt=""><span>Anjos de focinho</span></li>
-                    <li><img src="Midias/home/guabi.png" alt=""><span>Guabi Natural</span></li>
-                    <li><img src="Midias/home/novo_lar.png" alt=""><span>Novo Lar Pet</span></li>
-                    <li><img src="Midias/home/petz.png" alt=""><span>Petz</span></li>
-                    <li><img src="Midias/home/vetvida.png" alt=""><span>VetVida</span></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+                    <div class="marquee" aria-label="Parceiros do Lar&amp;Patas">
+                        <ul class="marquee-track">
+                            <li><img src="Midias/home/amigo_vet.png" alt=""><span>Amigo Vet</span></li>
+                            <li><img src="Midias/home/anjos_de_focinho.png" alt=""><span>Anjos de focinho</span></li>
+                            <li><img src="Midias/home/guabi.png" alt=""><span>Guabi Natural</span></li>
+                            <li><img src="Midias/home/novo_lar.png" alt=""><span>Novo Lar Pet</span></li>
+                            <li><img src="Midias/home/petz.png" alt=""><span>Petz</span></li>
+                            <li><img src="Midias/home/vetvida.png" alt=""><span>VetVida</span></li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </section>
 
  <!-- Rodapé -->
         <footer class="footer">

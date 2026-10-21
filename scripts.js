@@ -254,3 +254,111 @@ if (botaoMenu && menu) {
     });
 
 }
+
+//todo os pets
+const pets = [
+    //Cachorros
+    { id: 1, nome: 'Belinha', especie: 'Cachorro', porte: 'Pequeno', idade: '2 meses', ong: 'Anjos de Focinho', img: 'Midias/cachorros/Belina.jpg' },
+    { id: 2, nome: 'Bento', especie: 'Cachorro', porte: 'Pequeno', idade: '6 meses', ong: 'Anjos de Focinho', img: 'Midias/cachorros/Bento.jpg' },
+    { id: 3, nome: 'Billy', especie: 'Cachorro', porte: 'Médio', idade: '3 anos', ong: 'Novo Lar Pet', img: 'Midias/cachorros/Billy.jpg' },
+    { id: 4, nome: 'Fred', especie: 'Cachorro', porte: 'Médio', idade: '4 anos', ong: 'VetVida', img: 'Midias/cachorros/Fred.jpg' },
+    { id: 5, nome: 'Frida e Apollo', especie: 'Cachorro', porte: 'Médio', idade: '2 anos', ong: 'Novo Lar Pet', img: 'Midias/cachorros/Frida e Apollo.jpg' },
+    { id: 6, nome: 'Jade', especie: 'Cachorro', porte: 'Grande', idade: '4 anos', ong: 'Amigo Vet', img: 'Midias/cachorros/Jade.jpg' },
+    { id: 7, nome: 'Kiara', especie: 'Cachorro', porte: 'Grande', idade: '2 anos', ong: 'Amigo Vet', img: 'Midias/cachorros/Kiara.jpg' },
+    { id: 8, nome: 'Luna', especie: 'Cachorro', porte: 'Pequeno', idade: '5 anos', ong: 'Amigo Vet', img: 'Midias/cachorros/Luna.jpg' },
+    { id: 9, nome: 'Maia', especie: 'Cachorro', porte: 'Grande', idade: '2 anos', ong: 'Anjos de Focinho', img: 'Midias/cachorros/Maia.jpg' },
+    { id: 10, nome: 'Marley', especie: 'Cachorro', porte: 'Médio', idade: '2 anos', ong: 'Amigo Vet', img: 'Midias/cachorros/Marley.jpg' },
+    { id: 11, nome: 'Neguinha', especie: 'Cachorro', porte: 'Grande', idade: '3 anos', ong: 'Novo Lar Pet', img: 'Midias/cachorros/Neguinha.jpg' },
+    { id: 12, nome: 'Paçoca', especie: 'Cachorro', porte: 'Grande', idade: '2 anos', ong: 'Novo Lar Pet', img: 'Midias/cachorros/Paçoca.jpg' },
+    { id: 13, nome: 'Pingo', especie: 'Cachorro', porte: 'Médio', idade: '5 anos', ong: 'Anjos de Focinho', img: 'Midias/cachorros/Pingo.jpg' },
+    { id: 14, nome: 'Pirata', especie: 'Cachorro', porte: 'Pequeno', idade: '7 meses', ong: 'Anjos de Focinho', img: 'Midias/cachorros/Pirata.jpg' },
+    { id: 15, nome: 'Sasha', especie: 'Cachorro', porte: 'Médio', idade: '1 ano', ong: 'Novo Lar Pet', img: 'Midias/cachorros/sasha.jpg' },
+
+    //Gatos
+    { id: 16, nome: 'Bella Hadid', especie: 'Gato', porte: 'Médio', idade: '2 anos', ong: 'Anjos de Focinho', img: 'Midias/gatos/Bella.jpg' },
+    { id: 17, nome: 'Breu', especie: 'Gato', porte: 'Médio', idade: '2 anos', ong: 'Anjos de Focinho', img: 'Midias/gatos/Breu.jpg' },
+    { id: 18, nome: 'Bruno', especie: 'Gato', porte: 'Grande', idade: '4 anos', ong: 'Anjos de Focinho', img: 'Midias/gatos/Bruno.jpg' },
+    { id: 19, nome: 'Flores', especie: 'Gato', porte: 'Pequeno', idade: '5 meses', ong: 'Novo Lar Pet', img: 'Midias/gatos/Flores.jpg' },
+    { id: 20, nome: 'Kira', especie: 'Gato', porte: 'Médio', idade: '2 anos', ong: 'VetVida', img: 'Midias/gatos/Kira.jpg' },
+    { id: 21, nome: 'Mimi', especie: 'Gato', porte: 'Pequeno', idade: '6 meses', ong: 'Novo Lar Pet', img: 'Midias/gatos/Mimi.jpg' },
+    { id: 22, nome: 'Mingau', especie: 'Gato', porte: 'Grande', idade: '1 ano', ong: 'Amigo Vet', img: 'Midias/gatos/Mingau.jpg' },
+    { id: 23, nome: 'Perola', especie: 'Gato', porte: 'Grande', idade: '3 anos', ong: 'Amigo Vet', img: 'Midias/gatos/Perola.jpg' },
+    { id: 24, nome: 'Romeo', especie: 'Gato', porte: 'Pequeno', idade: '1 ano', ong: 'Amigo Vet', img: 'Midias/gatos/Romeo.jpg' },
+    { id: 25, nome: 'Salem', especie: 'Gato', porte: 'Médio', idade: '2 anos', ong: 'Anjos de Focinho', img: 'Midias/gatos/Salem.jpg' },
+    { id: 26, nome: 'Scar', especie: 'Gato', porte: 'Pequeno', idade: '1 ano', ong: 'Amigo Vet', img: 'Midias/gatos/Scar.jpg' },
+    { id: 27, nome: 'Zoe', especie: 'Gato', porte: 'Grande', idade: '3 anos', ong: 'Novo Lar Pet', img: 'Midias/gatos/Zoe.jpg' },
+];
+
+/*elementos do DOM*/
+const gridPets = document.getElementById('gridPets');
+const filtroOng = document.getElementById('filtroOng');
+const filtroEspecie = document.getElementById('filtroEspecie');
+const filtroPorte = document.getElementById('filtroPorte');
+const btnlimpar = document.getElementById('btnLimpar');
+
+/*Função para desenhar os cards na tela*/
+function renderizarPets(lista) {
+    gridPets.innerHTML = '';
+
+    if (lista.length === 0) {
+        gridPets.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <p class="fs-5 text-muted">Nenhum pet encontrado com os filtros selecionados.</p>
+            </div>`;
+        return;
+    }
+
+    lista.forEach(pet => {
+        const cardHTML = `
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm pet-card">
+                    <img src="${pet.img}" class="card-img-top pet-img" alt="Foto de ${pet.nome}">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-uppercase fw-bold text-warning mb-1" style="font-size: 0.75rem;">
+                            ${pet.ong}
+                        </small>
+                        <h4 class="card-title fw-bold mb-1">${pet.nome}</h4>
+                        <p class="card-text text-muted small mb-3">
+                            ${pet.porte} | ${pet.especie} | ${pet.idade}
+                        </p>
+                        <a href="adocao.html?pet=${pet.id}" class="btn-adotar mt-auto w-100 py-2 text-center text-decoration-none">Quero adotar</a>
+                    </div>
+                </div>
+            </div>
+        `;
+        gridPets.innerHTML += cardHTML;
+    });
+}
+
+/*funçao para aplicar os filtros combinados*/
+function aplicarFiltros() {
+    const ongSelecionada = filtroOng.value;
+    const especieSelecionada = filtroEspecie.value;
+    const porteSelecionado = filtroPorte.value;
+
+    const resultado = pets.filter(pet => {
+        const atendeOng = (ongSelecionada === 'todas') || (pet.ong === ongSelecionada);
+        const atendeEspecie = (especieSelecionada === 'todas') || (pet.especie === especieSelecionada);
+        const atendePorte = (porteSelecionado === 'todos') || (pet.porte === porteSelecionado);
+
+        return atendeOng && atendeEspecie && atendePorte;
+    });
+
+    renderizarPets(resultado);
+}
+
+/*event Listeners para filtrar em tempo real ao mudar a opção*/
+filtroOng.addEventListener('change', aplicarFiltros);
+filtroEspecie.addEventListener('change', aplicarFiltros);
+filtroPorte.addEventListener('change', aplicarFiltros);
+
+/*Resetar filtros */
+btnlimpar.addEventListener('click', () => {
+    filtroOng.value = 'todas';
+    filtroEspecie.value = 'todas';
+    filtroPorte.value = 'todos';
+    aplicarFiltros();
+});
+
+/*inicialização da pagina */
+renderizarPets(pets);

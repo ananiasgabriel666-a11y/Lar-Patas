@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="page">
 
@@ -17,10 +19,8 @@
                 <img src="Midias/home/logo.png" alt="Lar&amp;Patas - página inicial">
             </a>
 
-            <button class="menu-toggle" type="button"
-                    aria-label="Abrir menu"
-                    aria-expanded="false"
-                    aria-controls="menu-principal">
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu-principal">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,21 +32,25 @@
                     <li class="tem-submenu">
                         <a href="pets.html">Encontre Seu Pet</a>
                         <ul class="submenu">
-                            <li><a href="conheca-pets.html" aria-current="page">Conheça os Pets<span class="submenu-desc">Veja os cães e gatos disponíveis</span></a></li>
-                            <li><a href="adocao.html">Formulário de Adoção<span class="submenu-desc">Envie seu interesse à ONG</span></a></li>
+                            <li><a href="conheca-pets.html" aria-current="page">Conheça os Pets<span
+                                        class="submenu-desc">Veja os cães e gatos disponíveis</span></a></li>
+                            <li><a href="adocao.html">Formulário de Adoção<span class="submenu-desc">Envie seu interesse
+                                        à ONG</span></a></li>
                         </ul>
                     </li>
                     <li class="tem-submenu">
                         <a href="como-funciona.html">Como Funciona</a>
                         <ul class="submenu">
-                            <li><a href="politica-adocao.html">Política de Adoção<span class="submenu-desc">Regras e papel do Lar&amp;Patas</span></a></li>
+                            <li><a href="politica-adocao.html">Política de Adoção<span class="submenu-desc">Regras e
+                                        papel do Lar&amp;Patas</span></a></li>
                         </ul>
                     </li>
                     <li><a href="ongs.html">ONGs Parceiras</a></li>
                     <li class="tem-submenu">
                         <a href="sobre.html">Lar&amp;Patas</a>
                         <ul class="submenu">
-                            <li><a href="missao.html">Nossa Missão<span class="submenu-desc">História, valores e impacto</span></a></li>
+                            <li><a href="missao.html">Nossa Missão<span class="submenu-desc">História, valores e
+                                        impacto</span></a></li>
                         </ul>
                     </li>
                     <li><a href="contato.html">Fale Conosco</a></li>
@@ -55,120 +59,79 @@
 
             <div class="topo-acoes">
                 <a class="perfil-link" href="perfil.html">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+                    </svg>
                     Perfil
                 </a>
                 <a class="botao botao-contorno" href="login.html">Entrar / Cadastrar</a>
             </div>
         </header>
 
-        <main>
-            <section class="section" aria-labelledby="t-pagina">
-                <div class="section-head">
-                    <h1 id="t-pagina">Conheça os Pets</h1>
-                    <p>Veja os cães e gatos disponíveis para adoção e filtre por ONG, espécie e porte.</p>
-                </div>
-            </section>
+        <section class="container-fluid py-4">
+            <div class="container-lg mx-auto">
+                <main>
+                    <div class="container my-5">
+                        <!--cabeçalho e filtro-->
+                        <div class="text-center mb-4">
+                            <h1 class="fw-bold display-5">Conheça os Pets</h1>
+                            <p class="text-muted">Veja os cães e gatos disponiveis para adoção e filtre por ONG, espécie
+                                e porte.</p>
+                        </div>
 
-            <section class="section" aria-labelledby="t-filtros">
-                <h2 id="t-filtros">Filtrar pets</h2>
-                <form id="form-filtros" aria-label="Filtros de busca">
-                    <label for="filtro-ong">ONG</label>
-                    <select id="filtro-ong" name="ong">
-                        <option value="">Todas</option>
-                        <option value="amigo-vet">Amigo Vet</option>
-                        <option value="anjos-de-focinho">Anjos de Focinho</option>
-                        <option value="novo-lar-pet">Novo Lar Pet</option>
-                        <option value="vetvida">VetVida</option>
-                    </select>
+                        <!--Barra de filtro-->
+                        <div class="card p-3 shadow-sem mb-4 border-0 rouded=4 bg-white">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-3">
+                                    <label class="from-label fw-semibold">ONG</label>
+                                    <select id="filtroOng" class="form-select">
+                                        <option value="todas">Todas</option>
+                                        <option value="Anjos de Focinho">anjos de Focinho</option>
+                                        <option value="Novo Lar Pet">Novo Lar Pet</option>
+                                        <option value="Amigo Vet">Amigo Vet</option>
+                                        <option value="VetVida">VetVida</option>
+                                    </select>
+                                </div>
 
-                    <label for="filtro-especie">Espécie</label>
-                    <select id="filtro-especie" name="especie">
-                        <option value="">Todas</option>
-                        <option value="cachorro">Cachorro</option>
-                        <option value="gato">Gato</option>
-                    </select>
+                                <div class="col-md-3">
+                                    <label class="form-label fw-semibold">Espécie</label>
+                                    <select id="filtroEspecie" class="form-select">
+                                        <option value="todas">Todas (Cães e Gatos)</option>
+                                        <option value="Cachorro">Apenas Cachorros</option>
+                                        <option value="Gato">Apenas Gatos</option>
+                                    </select>
+                                </div>
 
-                    <label for="filtro-porte">Porte</label>
-                    <select id="filtro-porte" name="porte">
-                        <option value="">Todos</option>
-                        <option value="pequeno">Pequeno</option>
-                        <option value="medio">Médio</option>
-                        <option value="grande">Grande</option>
-                    </select>
+                                <div class="col-md-3">
+                                    <label class="form-label fw-semibold">Porte</label>
+                                    <select id="filtroPorte" class="form-select">
+                                        <option value="Todos">Todos</option>
+                                        <option value="Pequeno">Pequeno</option>
+                                        <option value="Médio">Médio</option>
+                                        <option value="Grande">Grande</option>
+                                    </select>
+                                </div>
 
-                    <button type="submit" class="btn btn-primary">Filtrar</button>
-                </form>
-            </section>
+                                <div class="col-md-3 d-flex align-items-end">
+                                    <button id="btnLimpar" class="btn btn-outline-secondary w-100 mt-md-4">
+                                        Limpar Filtros
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-            <section class="section" aria-labelledby="t-tabela">
-                <h2 id="t-tabela">Pets disponíveis</h2>
-                <table id="tabela-pets">
-                    <caption>Lista de pets disponíveis para adoção</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Espécie</th>
-                            <th scope="col">Porte</th>
-                            <th scope="col">Idade</th>
-                            <th scope="col">ONG</th>
-                            <th scope="col">Adoção</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Thor</td>
-                            <td>Cachorro</td>
-                            <td>Grande</td>
-                            <td>3 anos</td>
-                            <td>Anjos de Focinho</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Mel</td>
-                            <td>Cachorro</td>
-                            <td>Médio</td>
-                            <td>2 anos</td>
-                            <td>Novo Lar Pet</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Luna</td>
-                            <td>Gato</td>
-                            <td>Pequeno</td>
-                            <td>1 ano</td>
-                            <td>Amigo Vet</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Simba</td>
-                            <td>Gato</td>
-                            <td>Pequeno</td>
-                            <td>4 anos</td>
-                            <td>VetVida</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Bolinha</td>
-                            <td>Cachorro</td>
-                            <td>Pequeno</td>
-                            <td>5 anos</td>
-                            <td>Novo Lar Pet</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Nina</td>
-                            <td>Gato</td>
-                            <td>Pequeno</td>
-                            <td>6 meses</td>
-                            <td>Anjos de Focinho</td>
-                            <td><a href="adocao.html">Quero adotar</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
+                        <!--grid de cards dos pets-->
+                        <div id="gridPets" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- os cards serão inseridos via javascript aqui-->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
 
+
+        <!--roda pé-->
         <footer class="footer">
             <img class="footer-logo" src="Midias/home/logo.png" alt="Lar&amp;Patas">
             <div class="footer-cols">
@@ -198,4 +161,5 @@
 
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -62,47 +62,52 @@
             </div>
         </header>
 
-        <main>
-            <section class="section" aria-labelledby="t-pagina">
-                <div class="section-head">
-                    <h1 id="t-pagina">Entrar ou Cadastrar</h1>
-                    <p>Acesse sua conta para acompanhar seus pedidos de adoção.</p>
-                </div>
-            </section>
+        <section class="container-fluid py-4">
+            <div class="container-lg mx-auto">
 
-            <section class="section" aria-labelledby="t-entrar">
-                <h2 id="t-entrar">Já tenho conta</h2>
-                <form id="form-login" novalidate>
-                    <label for="login-email">E-mail</label>
-                    <input type="email" id="login-email" name="email" required>
+                <main>
+                    <section class="section" aria-labelledby="t-pagina">
+                        <div class="section-head">
+                            <h1 id="t-pagina">Entrar ou Cadastrar</h1>
+                            <p>Acesse sua conta para acompanhar seus pedidos de adoção.</p>
+                        </div>
+                    </section>
 
-                    <label for="login-senha">Senha</label>
-                    <input type="password" id="login-senha" name="senha" required>
+                    <section class="section" aria-labelledby="t-entrar">
+                        <h2 id="t-entrar">Já tenho conta</h2>
+                        <form id="form-login" novalidate>
+                            <label for="login-email">E-mail</label>
+                            <input type="email" id="login-email" name="email" required>
 
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                    <p>Depois de entrar, veja o seu <a href="perfil.html">perfil</a>.</p>
-                </form>
-            </section>
+                            <label for="login-senha">Senha</label>
+                            <input type="password" id="login-senha" name="senha" required>
 
-            <section class="section" aria-labelledby="t-cadastrar">
-                <h2 id="t-cadastrar">Quero me cadastrar</h2>
-                <form id="form-cadastro" novalidate>
-                    <label for="cad-nome">Nome completo</label>
-                    <input type="text" id="cad-nome" name="nome" required>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            <p>Depois de entrar, veja o seu <a href="perfil.html">perfil</a>.</p>
+                        </form>
+                    </section>
 
-                    <label for="cad-email">E-mail</label>
-                    <input type="email" id="cad-email" name="email" required>
+                    <section class="section" aria-labelledby="t-cadastrar">
+                        <h2 id="t-cadastrar">Quero me cadastrar</h2>
+                        <form id="form-cadastro" novalidate>
+                            <label for="cad-nome">Nome completo</label>
+                            <input type="text" id="cad-nome" name="nome" required>
 
-                    <label for="cad-senha">Senha</label>
-                    <input type="password" id="cad-senha" name="senha" minlength="6" required>
+                            <label for="cad-email">E-mail</label>
+                            <input type="email" id="cad-email" name="email" required>
 
-                    <label for="cad-confirma">Confirmar senha</label>
-                    <input type="password" id="cad-confirma" name="confirma" minlength="6" required>
+                            <label for="cad-senha">Senha</label>
+                            <input type="password" id="cad-senha" name="senha" minlength="6" required>
 
-                    <button type="submit" class="btn btn-primary">Criar conta</button>
-                </form>
-            </section>
-        </main>
+                            <label for="cad-confirma">Confirmar senha</label>
+                            <input type="password" id="cad-confirma" name="confirma" minlength="6" required>
+
+                            <button type="submit" class="btn btn-primary">Criar conta</button>
+                        </form>
+                    </section>
+                </main>
+            </div>
+        </section>
 
         <footer class="footer">
             <img class="footer-logo" src="Midias/home/logo.png" alt="Lar&amp;Patas">

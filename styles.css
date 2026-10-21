@@ -338,51 +338,24 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
     padding: 44px 24px 96px;
 }
 
-.contato-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
-    align-items: center;
-    gap: clamp(32px, 6vw, 80px);
-    max-width: 1160px;
-    margin: 0 auto;
-    padding: clamp(28px, 5vw, 64px);
-    overflow: hidden;
-    background: var(--pessego);
-    border-radius: 32px;
+.contato-hero {display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+  align-items: center; gap: clamp(32px, 6vw, 80px);  max-width: 1160px;  margin: 0 auto;
+  padding: clamp(28px, 5vw, 64px);  overflow: hidden;  background: var(--pessego);  border-radius: 32px;
 }
 
-.contato-hero-texto h1 {
-    max-width: 580px;
-    margin: 18px 0;
-    color: var(--petroleo);
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.08;
+.contato-hero-texto h1 {  max-width: 580px;  margin: 18px 0;  color: var(--petroleo);
+    font-size: clamp(2.4rem, 5vw, 4rem);  font-weight: 700;  line-height: 1.08;
 }
 
-.contato-hero-texto p {
-    max-width: 520px;
-    margin: 0 0 26px;
-    font-family: var(--fonte-texto);
-    font-size: 1.08rem;
+.contato-hero-texto p { max-width: 520px; margin: 0 0 26px; font-family: var(--fonte-texto); font-size: 1.08rem;
 }
 
-.contato-selo, .contato-etiqueta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--petroleo);
-    font-family: var(--fonte-texto);
-    font-size: .88rem;
-    font-weight: 700;
-    letter-spacing: .04em;
-    text-transform: uppercase;
+.contato-selo, .contato-etiqueta { display: inline-flex; align-items: center; gap: 8px;
+    color: var(--petroleo); font-family: var(--fonte-texto); font-size: .88rem; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase;
 }
 
-.contato-selo {
-    padding: 8px 14px;
-    background: rgba(255, 253, 249, .72);
-    border-radius: 999px;
+.contato-selo { padding: 8px 14px;  background: rgba(255, 253, 249, .72);  border-radius: 999px;
 }
 
 .contato-selo span { color: var(--laranja); }
@@ -396,144 +369,75 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
     box-shadow: 0 18px 40px rgba(59, 42, 32, .16);
 }
 
-.contato-hero-imagem img {
+.contato-hero-imagem img,
+.contato-hero-imagem video {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 82% center;
 }
-
-.contato-imagem-legenda {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    left: 14px;
-    padding: 11px 16px;
-    background: var(--branco);
-    border-radius: 14px;
-    color: var(--petroleo);
-    font-size: .95rem;
-    font-weight: 600;
-    box-shadow: var(--sombra);
+.contato-imagem-legenda {  position: absolute; right: 14px; bottom: 14px;  left: 14px;
+    padding: 11px 16px; background: var(--branco); border-radius: 14px; color: var(--petroleo);
+    font-size: .95rem; font-weight: 600;  box-shadow: var(--sombra);
 }
 
 .contato-imagem-legenda span { margin-right: 6px; }
 
-.contato-conteudo {
-    display: grid;
-    grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);
-    align-items: start;
-    gap: clamp(28px, 5vw, 64px);
-    max-width: 1080px;
-    margin: 72px auto 0;
+.contato-conteudo {display: grid; grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);  align-items: start;
+    gap: clamp(28px, 5vw, 64px);  max-width: 1080px;  margin: 72px auto 0;
 }
 
 .contato-canais { padding: 20px 0; }
 
-.contato-canais h2, .contato-form-card h2 {
-    margin: 8px 0;
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
-    font-weight: 700;
+.contato-canais h2, .contato-form-card h2 {  margin: 8px 0;  font-size: clamp(1.7rem, 3vw, 2.2rem);  font-weight: 700;
 }
 
-.contato-intro {
-    margin: 0 0 24px;
-    color: #6b5a4d;
-    font-family: var(--fonte-texto);
+.contato-intro { margin: 0 0 24px; color: #6b5a4d; font-family: var(--fonte-texto);
 }
 
-.contato-canais address {
-    display: grid;
-    gap: 12px;
-    margin: 28px 0 0;
+.contato-canais address { display: grid; gap: 12px; margin: 28px 0 0;
 }
 
-.contato-canal {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 0;
-    padding: 16px;
-    background: var(--branco);
-    border: 1px solid rgba(15, 76, 92, .08);
-    border-radius: 18px;
-    color: var(--marrom);
-    text-decoration: none;
-    transition: transform .2s, box-shadow .2s, border-color .2s;
+.contato-canal {  display: flex; align-items: center;gap: 14px; min-width: 0; padding: 16px;
+    background: var(--branco); border: 1px solid rgba(15, 76, 92, .08); border-radius: 18px;color: var(--marrom);
+    text-decoration: none;transition: transform .2s, box-shadow .2s, border-color .2s;
 }
 
-a.contato-canal:hover {
-    transform: translateY(-2px);
-    border-color: rgba(15, 76, 92, .24);
-    box-shadow: var(--sombra);
+a.contato-canal:hover {transform: translateY(-2px); border-color: rgba(15, 76, 92, .24); box-shadow: var(--sombra);
 }
 
-.contato-icone {
-    display: grid;
-    flex: 0 0 46px;
-    width: 46px;
-    height: 46px;
-    place-items: center;
-    background: #fcebd5;
-    border-radius: 14px;
-    color: var(--petroleo);
+.contato-icone { display: grid; flex: 0 0 46px; width: 46px; height: 46px; place-items: center;
+    background: #fcebd5; border-radius: 14px;  color: var(--petroleo);
 }
 
-.contato-icone svg {
-    width: 22px;
-    height: 22px;
-    fill: none;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.8;
+.contato-icone svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-linecap: round;
+    stroke-linejoin: round; stroke-width: 1.8;
 }
 
 .contato-icone .contato-icone-ponto { fill: currentColor; stroke: none; }
 
-.contato-canal > span:nth-child(2) {
-    display: grid;
-    min-width: 0;
+.contato-canal > span:nth-child(2) { display: grid; min-width: 0;
 }
 
-.contato-canal-titulo {
-    color: #75675d;
-    font-family: var(--fonte-texto);
-    font-size: .82rem;
-    font-weight: 600;
+.contato-canal-titulo { color: #75675d; font-family: var(--fonte-texto); font-size: .82rem;  font-weight: 600;
 }
 
-.contato-canal-dado {
-    overflow-wrap: anywhere;
-    color: var(--petroleo);
-    font-weight: 600;
+.contato-canal-dado { overflow-wrap: anywhere; color: var(--petroleo); font-weight: 600;
 }
 
-.contato-seta {
-    margin-left: auto;
-    color: var(--laranja);
-    font-size: 1.1rem;
+.contato-seta { margin-left: auto; color: var(--laranja); font-size: 1.1rem;
 }
 
-.contato-nota {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-    padding: 16px;
-    background: rgba(247, 217, 174, .52);
-    border-radius: 16px;
+.contato-nota { display: flex; gap: 12px; margin-top: 24px; padding: 16px;
+    background: rgba(247, 217, 174, .52); border-radius: 16px;
 }
 
 .contato-nota > span { font-size: 1.3rem; }
 .contato-nota p { margin: 0; font-family: var(--fonte-texto); font-size: .92rem; }
 
-.contato-form-card {
-    padding: clamp(24px, 4vw, 40px);
-    background: var(--branco);
-    border: 1px solid rgba(15, 76, 92, .08);
-    border-radius: 24px;
-    box-shadow: 0 12px 36px rgba(59, 42, 32, .08);
+.contato-form-card { padding: clamp(24px, 4vw, 40px); background: var(--branco); border: 1px solid rgba(15, 76, 92, .08);
+    border-radius: 24px; box-shadow: 0 12px 36px rgba(59, 42, 32, .08);
 }
 
 .contato-form {
@@ -567,33 +471,15 @@ a.contato-canal:hover {
 .contato-form input::placeholder, .contato-form textarea::placeholder { color: #988b81; }
 
 .contato-form input:focus, .contato-form select:focus, .contato-form textarea:focus {
-    border-color: var(--petroleo);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(15, 76, 92, .12);
+    border-color: var(--petroleo); outline: none; box-shadow: 0 0 0 3px rgba(15, 76, 92, .12);
 }
 
-.contato-form .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    justify-self: start;
-    margin-top: 12px;
-    padding: 12px 24px;
-    border: 2px solid var(--petroleo);
-    border-radius: 999px;
-    background: var(--petroleo);
-    color: var(--branco);
-    font-family: var(--fonte-titulo);
-    font-weight: 600;
-    transition: background .2s, transform .2s;
+.contato-form .btn-primary { display: inline-flex; align-items: center;  justify-content: center;  gap: 10px;
+    justify-self: start; margin-top: 12px;  padding: 12px 24px;  border: 2px solid var(--petroleo);  border-radius: 999px;
+    background: var(--petroleo); color: var(--branco); font-family: var(--fonte-titulo);   font-weight: 600; transition: background .2s, transform .2s;
 }
 
-.contato-form .btn-primary:hover {
-    transform: translateY(-2px);
-    border-color: var(--petroleo);
-    background: var(--laranja);
-    color: var(--branco);
+.contato-form .btn-primary:hover {  transform: translateY(-2px); border-color: var(--petroleo); background: var(--laranja);  color: var(--branco);
 }
 
 @media (max-width: 800px) {
@@ -639,13 +525,25 @@ a.contato-canal:hover {
 
 /* 3. SELETOR COMPOSTO + PSEUDOCLASSE (:hover): Efeito de transição nas responsabilidades */
 /* Quando o rato passa sobre um article dentro da secção t-resp, cria uma margem à esquerda */
-section[aria-labelledby="t-resp"] article {
-    transition: all 0.3s ease;
-    padding-left: 10px;
-    border-left: 3px solid transparent;
+section[aria-labelledby="t-resp"] article { transition: all 0.3s ease; padding-left: 10px; border-left: 3px solid transparent;
 }
 
-section[aria-labelledby="t-resp"] article:hover {
-    border-left-color: #ff9800;
-    background-color: #fcfcfc;
+section[aria-labelledby="t-resp"] article:hover { border-left-color: #ff9800; background-color: #fcfcfc;
+}
+
+/*Ajustes no Cards do catalogo*/
+.pet-card {transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: var(--raio); overflow: hidden;
+}
+
+.pet-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, .01) !important;
+}
+
+.pet-img {height: 250px; object-fit: cover;
+}
+
+.btn-adotar { background-color:var(--laranja); color: var(--branco); border-radius: 8px; font-weight: 600;
+}
+
+.btn-adotar:hover { background-color: var(--petroleo); color: var(--branco);
 }

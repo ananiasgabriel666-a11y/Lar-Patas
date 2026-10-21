@@ -61,125 +61,130 @@
             </div>
         </header>
 
-    <main> <!-- Adicionado py-5 e container para desgrudar das bordas -->
-        <section class="section py-5" aria-labelledby="t-pagina">
-            <div class="container text-center">
-                    <div class="section-head mb-4">
-                        <h1 id="t-pagina" class="display-5 fw-bold ">Formulário de Adoção</h1>
-                        <p class="lead text-secondary">Conte um pouco sobre você. Enviaremos seu interesse à ONG responsável pelo pet.</p>
-                    </div>
-                </div>
-            </section>
+        <section class="container-fluid py-4">
+            <div class="container-lg mx-auto">
 
-            <section class="section pb-5" aria-labelledby="t-form">
-                <div class="container">
-                    <!-- Centraliza o formulário em telas grandes (col-lg-8) -->
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-8">
-                            
-                            <!-- Formulário com fundo branco e sombra suave -->
-                            <form id="form-adocao" class="bg-white p-4 p-md-5 rounded shadow-sm border" novalidate>
-                                <h2 id="t-form" class="h4 mb-4 text-center border-bottom pb-3">Seus dados</h2>
-
-                                <!-- Fieldset 1: Dados Pessoais -->
-                                <fieldset class="mb-5">
-                                    <legend class="h5 text-primary mb-3">Dados pessoais</legend>
-                                    
-                                    <!-- Row agrupa os inputs lado a lado no desktop -->
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="nome" class="form-label">Nome completo</label>
-                                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="email" class="form-label">E-mail</label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="voce@exemplo.com" required>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="telefone" class="form-label">Telefone</label>
-                                            <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" required>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="nascimento" class="form-label">Data de nascimento</label>
-                                            <input type="date" id="nascimento" name="nascimento" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <!-- Fieldset 2: Sobre a Adoção -->
-                                <fieldset class="mb-5">
-                                    <legend class="h5 text-primary mb-3">Sobre a adoção</legend>
-
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="pet" class="form-label">Pet de interesse</label>
-                                            <select id="pet" name="pet" class="form-select" required>
-                                                <option value="">Selecione</option>
-                                                <option value="thor">Thor (cachorro)</option>
-                                                <option value="mel">Mel (cachorro)</option>
-                                                <option value="luna">Luna (gato)</option>
-                                                <option value="simba">Simba (gato)</option>
-                                                <option value="bolinha">Bolinha (cachorro)</option>
-                                                <option value="nina">Nina (gato)</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="qtd-pets" class="form-label">Quantos animais você tem hoje?</label>
-                                            <input type="number" id="qtd-pets" name="qtdPets" class="form-control" min="0" max="20" value="0">
-                                        </div>
-
-                                        <div class="col-12 mt-4">
-                                            <label for="tempo" class="form-label">Horas por dia disponíveis para o pet: <output id="tempo-valor" for="tempo" class="fw-bold text-primary">4</output></label>
-                                            <input type="range" id="tempo" name="tempo" class="form-range" min="1" max="12" value="4">
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <!-- Fieldset 3: Tipo de Moradia -->
-                                <fieldset class="mb-4">
-                                    <legend class="h5 text-primary mb-3">Tipo de moradia</legend>
-
-                                    <div class="d-flex gap-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" id="moradia-casa" name="moradia" value="casa" required>
-                                            <label class="form-check-label" for="moradia-casa">Casa</label>
-                                        </div>
-
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" id="moradia-apto" name="moradia" value="apartamento">
-                                            <label class="form-check-label" for="moradia-apto">Apartamento</label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <!-- Textarea -->
-                                <div class="mb-4">
-                                    <label for="motivo" class="form-label">Por que você quer adotar?</label>
-                                    <textarea id="motivo" name="motivo" class="form-control" rows="4" placeholder="Conte sobre sua rotina e o que espera dessa adoção" required></textarea>
-                                </div>
-
-                                <!-- Checkbox de Termos -->
-                                <div class="mb-5 form-check">
-                                    <input class="form-check-input" type="checkbox" id="termos" name="termos" required>
-                                    <label class="form-check-label" for="termos">Li e aceito a <a href="politica-adocao.html" class="text-decoration-none">Política de Adoção</a></label>
-                                </div>
-
-                                <!-- Botões de Ação -->
-                                <div class="form-acoes d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button type="reset" class="btn btn-outline-secondary px-4">Limpar</button>
-                                    <button type="submit" class="btn btn-primary px-5">Enviar interesse</button>
-                                </div>
-                            </form>
-
+            <main> <!-- Adicionado py-5 e container para desgrudar das bordas -->
+                <section class="section py-5" aria-labelledby="t-pagina">
+                    <div class="container text-center">
+                            <div class="section-head mb-4">
+                                <h1 id="t-pagina" class="display-5 fw-bold ">Formulário de Adoção</h1>
+                                <p class="lead text-secondary">Conte um pouco sobre você. Enviaremos seu interesse à ONG responsável pelo pet.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+                    </section>
+
+                    <section class="section pb-5" aria-labelledby="t-form">
+                        <div class="container">
+                            <!-- Centraliza o formulário em telas grandes (col-lg-8) -->
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-lg-8">
+                                    
+                                    <!-- Formulário com fundo branco e sombra suave -->
+                                    <form id="form-adocao" class="bg-white p-4 p-md-5 rounded shadow-sm border" novalidate>
+                                        <h2 id="t-form" class="h4 mb-4 text-center border-bottom pb-3">Seus dados</h2>
+
+                                        <!-- Fieldset 1: Dados Pessoais -->
+                                        <fieldset class="mb-5">
+                                            <legend class="h5 text-primary mb-3">Dados pessoais</legend>
+                                            
+                                            <!-- Row agrupa os inputs lado a lado no desktop -->
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="nome" class="form-label">Nome completo</label>
+                                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">E-mail</label>
+                                                    <input type="email" id="email" name="email" class="form-control" placeholder="voce@exemplo.com" required>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="telefone" class="form-label">Telefone</label>
+                                                    <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" required>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="nascimento" class="form-label">Data de nascimento</label>
+                                                    <input type="date" id="nascimento" name="nascimento" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Fieldset 2: Sobre a Adoção -->
+                                        <fieldset class="mb-5">
+                                            <legend class="h5 text-primary mb-3">Sobre a adoção</legend>
+
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="pet" class="form-label">Pet de interesse</label>
+                                                    <select id="pet" name="pet" class="form-select" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="thor">Thor (cachorro)</option>
+                                                        <option value="mel">Mel (cachorro)</option>
+                                                        <option value="luna">Luna (gato)</option>
+                                                        <option value="simba">Simba (gato)</option>
+                                                        <option value="bolinha">Bolinha (cachorro)</option>
+                                                        <option value="nina">Nina (gato)</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="qtd-pets" class="form-label">Quantos animais você tem hoje?</label>
+                                                    <input type="number" id="qtd-pets" name="qtdPets" class="form-control" min="0" max="20" value="0">
+                                                </div>
+
+                                                <div class="col-12 mt-4">
+                                                    <label for="tempo" class="form-label">Horas por dia disponíveis para o pet: <output id="tempo-valor" for="tempo" class="fw-bold text-primary">4</output></label>
+                                                    <input type="range" id="tempo" name="tempo" class="form-range" min="1" max="12" value="4">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Fieldset 3: Tipo de Moradia -->
+                                        <fieldset class="mb-4">
+                                            <legend class="h5 text-primary mb-3">Tipo de moradia</legend>
+
+                                            <div class="d-flex gap-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="moradia-casa" name="moradia" value="casa" required>
+                                                    <label class="form-check-label" for="moradia-casa">Casa</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="moradia-apto" name="moradia" value="apartamento">
+                                                    <label class="form-check-label" for="moradia-apto">Apartamento</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Textarea -->
+                                        <div class="mb-4">
+                                            <label for="motivo" class="form-label">Por que você quer adotar?</label>
+                                            <textarea id="motivo" name="motivo" class="form-control" rows="4" placeholder="Conte sobre sua rotina e o que espera dessa adoção" required></textarea>
+                                        </div>
+
+                                        <!-- Checkbox de Termos -->
+                                        <div class="mb-5 form-check">
+                                            <input class="form-check-input" type="checkbox" id="termos" name="termos" required>
+                                            <label class="form-check-label" for="termos">Li e aceito a <a href="politica-adocao.html" class="text-decoration-none">Política de Adoção</a></label>
+                                        </div>
+
+                                        <!-- Botões de Ação -->
+                                        <div class="form-acoes d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <button type="reset" class="btn btn-outline-secondary px-4">Limpar</button>
+                                            <button type="submit" class="btn btn-primary px-5">Enviar interesse</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </section>
 
         <footer class="footer">
             <img class="footer-logo" src="Midias/home/logo.png" alt="Lar&amp;Patas">
