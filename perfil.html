@@ -68,8 +68,8 @@
         <section class="container-fluid py-4">
             <div class="container-lg mx-auto">
 
-                <main>
-                    <section class="section" aria-labelledby="t-pagina">
+                <main class="perfil-page">
+                    <section class="perfil-hero" aria-labelledby="t-pagina">
                         <div class="section-head">
                             <h1 id="t-pagina">Meu Perfil</h1>
                             <p>Acompanhe o andamento dos seus pedidos de adoção.</p>
@@ -77,44 +77,50 @@
                     </section>
 
                     <!-- Dados de exemplo: troque pelos que quiser exibir -->
-                    <section class="section" aria-labelledby="t-dados">
+                    <section class="perfil-card perfil-dados" aria-labelledby="t-dados">
                         <h2 id="t-dados">Meus dados</h2>
-                        <dl>
-                            <dt>Nome</dt>
-                            <dd>Nome do usuário</dd>
-                            <dt>E-mail</dt>
-                            <dd>usuario@exemplo.com</dd>
+                        <dl class="perfil-dados-lista">
+                            <div>
+                                <dt>Nome</dt>
+                                <dd>Nome do usuário</dd>
+                            </div>
+                            <div>
+                                <dt>E-mail</dt>
+                                <dd>usuario@exemplo.com</dd>
+                            </div>
                         </dl>
                     </section>
 
-                    <section class="section" aria-labelledby="t-pedidos">
+                    <section class="perfil-card perfil-pedidos" aria-labelledby="t-pedidos">
                         <h2 id="t-pedidos">Meus pedidos de adoção</h2>
-                        <table id="tabela-pedidos">
-                            <caption>Pedidos de adoção enviados</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Pet</th>
-                                    <th scope="col">ONG</th>
-                                    <th scope="col">Data do pedido</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Thor</td>
-                                    <td>Anjos de Focinho</td>
-                                    <td>05/10/2026</td>
-                                    <td>Em análise</td>
-                                </tr>
-                                <tr>
-                                    <td>Luna</td>
-                                    <td>Amigo Vet</td>
-                                    <td>28/09/2026</td>
-                                    <td>Aguardando contato da ONG</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p><a class="btn btn-primary" href="conheca-pets.html">Fazer novo pedido</a></p>
+                        <div class="perfil-tabela-scroll">
+                            <table id="tabela-pedidos">
+                                <caption>Pedidos de adoção enviados</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pet</th>
+                                        <th scope="col">ONG</th>
+                                        <th scope="col">Data do pedido</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thor</td>
+                                        <td>Anjos de Focinho</td>
+                                        <td>05/10/2026</td>
+                                        <td><span class="perfil-status perfil-status-analise">Em análise</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luna</td>
+                                        <td>Amigo Vet</td>
+                                        <td>28/09/2026</td>
+                                        <td><span class="perfil-status perfil-status-pendente">Aguardando contato da ONG</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a class="botao botao-primario perfil-novo-pedido" href="conheca-pets.html">Fazer novo pedido</a>
                     </section>
                 </main>
             </div>

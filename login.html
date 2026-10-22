@@ -68,46 +68,50 @@
         <section class="container-fluid py-4">
             <div class="container-lg mx-auto">
 
-                <main>
-                    <section class="section" aria-labelledby="t-pagina">
+                <main class="auth-page">
+                    <section class="auth-hero" aria-labelledby="t-pagina">
                         <div class="section-head">
                             <h1 id="t-pagina">Entrar ou Cadastrar</h1>
                             <p>Acesse sua conta para acompanhar seus pedidos de adoção.</p>
                         </div>
                     </section>
 
-                    <section class="section" aria-labelledby="t-entrar">
-                        <h2 id="t-entrar">Já tenho conta</h2>
-                        <form id="form-login" novalidate>
-                            <label for="login-email">E-mail</label>
-                            <input type="email" id="login-email" name="email" required>
+                    <div class="auth-grid">
+                        <section class="auth-card" aria-labelledby="t-entrar">
+                            <h2 id="t-entrar">Já tenho conta</h2>
+                            <p class="auth-card-intro">Entre para acompanhar seus pedidos de adoção.</p>
+                            <form id="form-login" novalidate>
+                                <label for="login-email">E-mail</label>
+                                <input type="email" id="login-email" name="email" required>
 
-                            <label for="login-senha">Senha</label>
-                            <input type="password" id="login-senha" name="senha" required>
+                                <label for="login-senha">Senha</label>
+                                <input type="password" id="login-senha" name="senha" required>
 
-                            <button type="submit" class="btn btn-primary">Entrar</button>
-                            <p>Depois de entrar, veja o seu <a href="perfil.html">perfil</a>.</p>
-                        </form>
-                    </section>
+                                <button type="submit" class="botao botao-primario">Entrar</button>
+                                <p class="auth-form-nota">Depois de entrar, veja o seu <a href="perfil.html">perfil</a>.</p>
+                            </form>
+                        </section>
 
-                    <section class="section" aria-labelledby="t-cadastrar">
-                        <h2 id="t-cadastrar">Quero me cadastrar</h2>
-                        <form id="form-cadastro" novalidate>
-                            <label for="cad-nome">Nome completo</label>
-                            <input type="text" id="cad-nome" name="nome" required>
+                        <section class="auth-card auth-card-cadastro" aria-labelledby="t-cadastrar">
+                            <h2 id="t-cadastrar">Quero me cadastrar</h2>
+                            <p class="auth-card-intro">Crie sua conta e acompanhe cada passo até encontrar seu novo amigo.</p>
+                            <form id="form-cadastro" novalidate>
+                                <label for="cad-nome">Nome completo</label>
+                                <input type="text" id="cad-nome" name="nome" required>
 
-                            <label for="cad-email">E-mail</label>
-                            <input type="email" id="cad-email" name="email" required>
+                                <label for="cad-email">E-mail</label>
+                                <input type="email" id="cad-email" name="email" required>
 
-                            <label for="cad-senha">Senha</label>
-                            <input type="password" id="cad-senha" name="senha" minlength="6" required>
+                                <label for="cad-senha">Senha</label>
+                                <input type="password" id="cad-senha" name="senha" minlength="6" required>
 
-                            <label for="cad-confirma">Confirmar senha</label>
-                            <input type="password" id="cad-confirma" name="confirma" minlength="6" required>
+                                <label for="cad-confirma">Confirmar senha</label>
+                                <input type="password" id="cad-confirma" name="confirma" minlength="6" required>
 
-                            <button type="submit" class="btn btn-primary">Criar conta</button>
-                        </form>
-                    </section>
+                                <button type="submit" class="botao botao-primario">Criar conta</button>
+                            </form>
+                        </section>
+                    </div>
                 </main>
             </div>
         </section>
