@@ -75,11 +75,30 @@ main { width: 100%; max-width: 1720px; min-height: 100vh; margin: 0 auto; backgr
 /*==== menu principal ====*/
 .menu > ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
 
-.menu > ul > li > a {position: relative; display: block; padding: 0.6rem 0;font-family: 'Fredoka', sans-serif; 
-    font-weight: 500; font-size: 0.98rem; color: var(--azul); text-decoration: none;}
+.menu > ul > li > a {
+    position: relative;
+    display: block;
+    padding: 0.6rem 0.85rem;
+    border-radius: 999px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 0.96rem;
+    letter-spacing: 0.01em;
+    color: var(--marrom);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
 
 .menu  > ul > li > a:hover {
+    background: var(--creme);
     color: var(--laranja);
+    transform: translateY(-1px);
+}
+
+.menu > ul > li > a[aria-current="page"],
+.menu > ul > li.pagina-atual > a {
+    background: var(--creme-escuro);
+    color: var(--petroleo);
 }
 
 /*==== submenu ====*/
