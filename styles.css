@@ -721,3 +721,245 @@ section[aria-labelledby="t-resp"] article:hover { border-left-color: #ff9800; ba
 
 .btn-adotar:hover { background-color: var(--petroleo); color: var(--branco);
 }
+
+/* ===== Sobre o Lar&Patas ===== */
+.sobre-page {
+    max-width: 1180px;
+    padding: 38px clamp(18px, 4vw, 48px) 84px;
+    font-family: var(--fonte-texto);
+}
+
+.sobre-hero {
+    display: grid;
+    place-items: center;
+    min-height: 390px;
+    padding: clamp(48px, 8vw, 88px) clamp(24px, 7vw, 80px);
+    overflow: hidden;
+    border: 1px solid rgba(15, 76, 92, .08);
+    border-radius: 30px;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(247, 217, 174, .72), transparent 38%),
+        radial-gradient(ellipse at 0% 100%, rgba(15, 76, 92, .09), transparent 40%),
+        var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.sobre-hero-texto {
+    max-width: 800px;
+    text-align: center;
+}
+
+.sobre-selo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: var(--pessego);
+    color: var(--petroleo);
+    font-family: var(--fonte-texto);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .03em;
+}
+
+.sobre-hero h1 {
+    max-width: 620px;
+    margin: 0 0 18px;
+    color: var(--marrom);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.sobre-hero h1 span { color: var(--petroleo); }
+
+.sobre-hero-texto > p {
+    max-width: 620px;
+    margin: 0;
+    margin-inline: auto;
+    color: #6b5a4d;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.sobre-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 22px;
+    margin-top: 28px;
+}
+
+.sobre-acoes .botao { text-align: center; }
+
+.sobre-link, .sobre-como-link a {
+    color: var(--petroleo);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.sobre-link:hover, .sobre-como-link a:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sobre-bloco { margin-top: clamp(64px, 9vw, 104px); }
+
+.sobre-quem {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: clamp(28px, 6vw, 80px);
+    align-items: start;
+    padding: 0 clamp(4px, 2vw, 24px);
+}
+
+.sobre-titulo h2, .sobre-bloco .section-head h2, .sobre-cta h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3.5vw, 2.65rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sobre-quem-texto {
+    padding-top: 8px;
+    color: #6b5a4d;
+    font-size: 1.02rem;
+    line-height: 1.85;
+}
+
+.sobre-quem-texto p { margin: 0 0 16px; }
+.sobre-quem-texto p:last-child { margin-bottom: 0; }
+.sobre-quem-texto strong { color: var(--petroleo); }
+
+.sobre-bloco .section-head {
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+.sobre-bloco .section-head .sobre-selo { margin-bottom: 12px; }
+
+.sobre-bloco .section-head h2::after {
+    width: 54px;
+    margin-top: 14px;
+}
+
+.sobre-bloco .section-head p {
+    margin: 14px 0 0;
+    color: #6b5a4d;
+    font-size: 1rem;
+}
+
+.sobre-etapas, .sobre-valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sobre-etapas li, .sobre-valores-grid li {
+    padding: 26px;
+    border: 1px solid rgba(15, 76, 92, .09);
+    border-radius: var(--raio);
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.sobre-etapa-numero {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--laranja);
+    font-family: var(--fonte-titulo);
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.sobre-etapas h3, .sobre-valores-grid h3 {
+    margin: 0 0 8px;
+    color: var(--petroleo);
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sobre-etapas p, .sobre-valores-grid p {
+    margin: 0;
+    color: #6b5a4d;
+    font-size: .94rem;
+    line-height: 1.7;
+}
+
+.sobre-como-link {
+    margin: 24px 0 0;
+    text-align: center;
+}
+
+.sobre-valores-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.sobre-valores-grid li {
+    padding: 24px 20px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.sobre-valores-grid li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(18, 75, 92, .15);
+}
+
+.sobre-valor-icone {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--pessego);
+    color: var(--petroleo);
+    font-size: 1.35rem;
+}
+
+.sobre-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    margin-top: clamp(64px, 9vw, 104px);
+    padding: clamp(28px, 5vw, 48px);
+    border-radius: 24px;
+    background: var(--petroleo);
+    color: var(--branco);
+}
+
+.sobre-cta .sobre-selo { background: rgba(255, 255, 255, .14); color: var(--branco); }
+.sobre-cta h2 { max-width: 570px; color: var(--branco); }
+.sobre-cta p { max-width: 570px; margin: 12px 0 0; color: rgba(255, 253, 249, .86); }
+.sobre-cta .sobre-acoes { flex-shrink: 0; margin: 0; }
+.sobre-cta .botao-contorno { border-color: var(--branco); color: var(--branco); }
+.sobre-cta .botao-contorno:hover, .sobre-cta .botao-contorno:focus { background: var(--branco); color: var(--petroleo); }
+
+@media (max-width: 900px) {
+    .sobre-valores-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sobre-cta { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 680px) {
+    .sobre-page { padding: 20px 14px 56px; }
+    .sobre-hero { min-height: 0; padding: 48px 22px; border-radius: 24px; }
+    .sobre-hero h1 { font-size: clamp(2.35rem, 11vw, 3.25rem); }
+    .sobre-quem { grid-template-columns: 1fr; gap: 18px; }
+    .sobre-etapas { grid-template-columns: 1fr; }
+    .sobre-etapas li, .sobre-valores-grid li { padding: 22px; }
+    .sobre-cta { padding: 28px 22px; }
+    .sobre-cta .sobre-acoes { width: 100%; }
+    .sobre-cta .botao { width: 100%; }
+}
+
+@media (max-width: 420px) {
+    .sobre-valores-grid { grid-template-columns: 1fr; }
+    .sobre-hero .sobre-acoes { align-items: stretch; flex-direction: column; }
+}
