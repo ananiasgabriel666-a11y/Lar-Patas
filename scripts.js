@@ -296,69 +296,75 @@ const filtroEspecie = document.getElementById('filtroEspecie');
 const filtroPorte = document.getElementById('filtroPorte');
 const btnlimpar = document.getElementById('btnLimpar');
 
-/*Função para desenhar os cards na tela*/
-function renderizarPets(lista) {
-    gridPets.innerHTML = '';
-
-    if (lista.length === 0) {
-        gridPets.innerHTML = `
-            <div class="col-12 text-center py-5">
-                <p class="fs-5 text-muted">Nenhum pet encontrado com os filtros selecionados.</p>
-            </div>`;
-        return;
+if (gridPets) {
+    if (!filtroOng || !filtroEspecie || !filtroPorte || !btnlimpar) {
+        throw new Error('A vitrine de pets precisa dos controles de filtro e do botão para limpar.');
     }
 
-    lista.forEach(pet => {
-        const cardHTML = `
-            <div class="col">
-                <div class="card h-100 border-0 shadow-sm pet-card">
-                    <img src="${pet.img}" class="card-img-top pet-img" alt="Foto de ${pet.nome}">
-                    <div class="card-body d-flex flex-column">
-                        <small class="text-uppercase fw-bold text-warning mb-1" style="font-size: 0.75rem;">
-                            ${pet.ong}
-                        </small>
-                        <h4 class="card-title fw-bold mb-1">${pet.nome}</h4>
-                        <p class="card-text text-muted small mb-3">
-                            ${pet.porte} | ${pet.especie} | ${pet.idade}
-                        </p>
-                        <a href="adocao.html?pet=${pet.id}" class="btn-adotar mt-auto w-100 py-2 text-center text-decoration-none">Quero adotar</a>
+    /*Função para desenhar os cards na tela*/
+    function renderizarPets(lista) {
+        gridPets.innerHTML = '';
+
+        if (lista.length === 0) {
+            gridPets.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <p class="fs-5 text-muted">Nenhum pet encontrado com os filtros selecionados.</p>
+                </div>`;
+            return;
+        }
+
+        lista.forEach(pet => {
+            const cardHTML = `
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm pet-card">
+                        <img src="${pet.img}" class="card-img-top pet-img" alt="Foto de ${pet.nome}">
+                        <div class="card-body d-flex flex-column">
+                            <small class="text-uppercase fw-bold text-warning mb-1" style="font-size: 0.75rem;">
+                                ${pet.ong}
+                            </small>
+                            <h4 class="card-title fw-bold mb-1">${pet.nome}</h4>
+                            <p class="card-text text-muted small mb-3">
+                                ${pet.porte} | ${pet.especie} | ${pet.idade}
+                            </p>
+                            <a href="adocao.html?pet=${pet.id}" class="btn-adotar mt-auto w-100 py-2 text-center text-decoration-none">Quero adotar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        gridPets.innerHTML += cardHTML;
+            `;
+            gridPets.innerHTML += cardHTML;
+        });
+    }
+
+    /*funçao para aplicar os filtros combinados*/
+    function aplicarFiltros() {
+        const ongSelecionada = filtroOng.value;
+        const especieSelecionada = filtroEspecie.value;
+        const porteSelecionado = filtroPorte.value;
+
+        const resultado = pets.filter(pet => {
+            const atendeOng = (ongSelecionada === 'todas') || (pet.ong === ongSelecionada);
+            const atendeEspecie = (especieSelecionada === 'todas') || (pet.especie === especieSelecionada);
+            const atendePorte = (porteSelecionado === 'todos') || (pet.porte === porteSelecionado);
+
+            return atendeOng && atendeEspecie && atendePorte;
+        });
+
+        renderizarPets(resultado);
+    }
+
+    /*event Listeners para filtrar em tempo real ao mudar a opção*/
+    filtroOng.addEventListener('change', aplicarFiltros);
+    filtroEspecie.addEventListener('change', aplicarFiltros);
+    filtroPorte.addEventListener('change', aplicarFiltros);
+
+    /*Resetar filtros */
+    btnlimpar.addEventListener('click', () => {
+        filtroOng.value = 'todas';
+        filtroEspecie.value = 'todas';
+        filtroPorte.value = 'todos';
+        aplicarFiltros();
     });
+
+    /*inicialização da pagina */
+    renderizarPets(pets);
 }
-
-/*funçao para aplicar os filtros combinados*/
-function aplicarFiltros() {
-    const ongSelecionada = filtroOng.value;
-    const especieSelecionada = filtroEspecie.value;
-    const porteSelecionado = filtroPorte.value;
-
-    const resultado = pets.filter(pet => {
-        const atendeOng = (ongSelecionada === 'todas') || (pet.ong === ongSelecionada);
-        const atendeEspecie = (especieSelecionada === 'todas') || (pet.especie === especieSelecionada);
-        const atendePorte = (porteSelecionado === 'todos') || (pet.porte === porteSelecionado);
-
-        return atendeOng && atendeEspecie && atendePorte;
-    });
-
-    renderizarPets(resultado);
-}
-
-/*event Listeners para filtrar em tempo real ao mudar a opção*/
-filtroOng.addEventListener('change', aplicarFiltros);
-filtroEspecie.addEventListener('change', aplicarFiltros);
-filtroPorte.addEventListener('change', aplicarFiltros);
-
-/*Resetar filtros */
-btnlimpar.addEventListener('click', () => {
-    filtroOng.value = 'todas';
-    filtroEspecie.value = 'todas';
-    filtroPorte.value = 'todos';
-    aplicarFiltros();
-});
-
-/*inicialização da pagina */
-renderizarPets(pets);
