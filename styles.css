@@ -1906,3 +1906,115 @@ section[aria-labelledby="t-resp"] article:hover { border-left-color: #ff9800; ba
         text-align: center;
     }
 }
+
+/*pagina missao*/
+.hero-missao h1, .hero-missao h2, .faca-parte h2 {
+    color: var(--branco);
+}
+
+.card-missao,
+.card-missao, .card-bory p {
+    color: var(--marrom);
+}
+
+.icone-card {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.hero-missao {
+    background: var(--petroleo);
+    color: var(--branco);
+}
+
+.eyebrow {
+    color: var(--laranja);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.hero-lateral {
+    border-left: 1px solid rgba(255, 255, 255, .25);
+}
+
+.hero-numero {
+    color:var(--pessego);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.linha-laranja {
+    width: 48px;
+    height: 3px;
+    margin: 0 0 1rem;
+    background: var(--laranja);
+    opacity: 1;
+    border: 0;
+}
+
+/*Cards*/
+
+.card-missao {
+    background: var(--branco);
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(16, 79, 94, .08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-missao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(16, 79, 94, .14);
+}
+
+.titulo-card {
+    color: var(--petroleo);
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+
+.eyebrow-cinza {
+    color: #6b5a4d;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.icone-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--petroleo);
+    color: #fff;
+    font-size: 1.4rem;
+    box-shadow: 0 0 0 5px rgba(16, 79, 94, .12);
+}
+
+.card-destaque {
+    border-left: 6px solid var(--laranja);
+}
+
+.card-destaque .icone-card {
+    background: var(--laranja);
+    box-shadow: 0 0 0 5px rgba(242, 150, 15, .2);
+}
+
+.faca-parte {
+  background: var(--petroleo);
+  color: #fff;
+}
+.faca-parte-texto {
+  max-width: 560px;
+  font-size: 1.1rem;
+}
+.faca-parte .btn-outline-light:hover {
+  color: var(--petroleo);
+}
