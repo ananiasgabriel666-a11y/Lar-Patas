@@ -68,113 +68,130 @@
         <section class="container-fluid py-4">
             <div class="container-lg mx-auto">
 
-                <main class="py-5 bg-light">
-                    <div class="container">
-                        <!-- Limitamos a largura do conteúdo (col-lg-8) para melhorar a leitura -->
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 bg-white p-4 p-md-5 rounded shadow-sm border">
-                                
-                                <!-- Cabeçalho da Política -->
-                                <section class="section text-center mb-5 border-bottom pb-4" aria-labelledby="t-pagina">
-                                    <div class="section-head">
-                                        <h1 id="t-pagina" class="display-5 fw-bold mb-3">Política de Adoção</h1>
-                                        <p class="lead text-secondary">Entenda o papel do Lar&amp;Patas e as regras que valem para todas as adoções feitas pela plataforma.</p>
-                                    </div>
-                                </section>
+                <main class="container-lg py-5 bg-light">
+                    <article class="col-12 col-lg-8 mx-auto bg-white p-4 p-md-5 rounded shadow-sm border">
+                        
+                        <!-- Cabeçalho da Política -->
+                        <header class="text-center mb-5 border-bottom pb-4">
+                            <h1 id="t-pagina" class="display-5 fw-bold mb-3">Política de Adoção</h1>
+                            <p class="lead text-secondary">Entenda o papel do Lar&amp;Patas e as regras que valem para todas as adoções feitas pela plataforma.</p>
+                        </header>
 
-                                <!-- Aviso Importante (Estilizado como Alerta Bootstrap) -->
-                                <aside class="alert alert-warning d-flex align-items-center mb-5" role="alert" aria-labelledby="t-aviso">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16">
-                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                    <div>
-                                        <h2 id="t-aviso" class="h5 alert-heading mb-1 fw-bold">Importante</h2>
-                                        <p class="mb-0 text-dark">O Lar&amp;Patas atua <strong>apenas como intermediador</strong>. A análise do pedido, a entrevista e a entrega do animal são de responsabilidade exclusiva da ONG ou protetor responsável por ele.</p>
-                                    </div>
-                                </aside>
-
-                                <!-- Papel da Plataforma -->
-                                <section class="section mb-5" aria-labelledby="t-papel">
-                                    <h2 id="t-papel" class="h4 text-primary mb-3">O que o Lar&amp;Patas faz</h2>
-                                    <ul class="lista-politica lh-lg text-secondary">
-                                        <li>Divulga os animais disponíveis das ONGs parceiras.</li>
-                                        <li>Recebe o formulário de interesse e o encaminha à ONG responsável.</li>
-                                        <li>Permite que você acompanhe o status do pedido no seu perfil.</li>
-                                    </ul>
-                                </section>
-
-                                <!-- Requisitos do Adotante -->
-                                <section class="section mb-5" aria-labelledby="t-quem">
-                                    <h2 id="t-quem" class="h4 text-primary mb-3">Quem pode adotar</h2>
-                                    <ul class="lista-politica lh-lg text-secondary mb-3">
-                                        <li>Pessoas maiores de 18 anos, com documento de identidade.</li>
-                                        <li>Quem tem condições de oferecer alimentação, cuidados veterinários e um ambiente seguro ao animal.</li>
-                                        <li>Quem concorda em assinar o termo de adoção da ONG responsável.</li>
-                                    </ul>
-                                    <p class="fst-italic text-muted"><small>* Cada ONG pode ter critérios adicionais, informados durante o contato.</small></p>
-                                </section>
-
-                                <!-- Passo a Passo -->
-                                <section class="section mb-5" aria-labelledby="t-etapas">
-                                    <h2 id="t-etapas" class="h4 text-primary mb-3">Etapas da adoção</h2>
-                                    <ol class="lista-etapas lh-lg text-secondary">
-                                        <li>Escolha um pet na <a href="conheca-pets.html" class="fw-bold text-decoration-none">vitrine</a>.</li>
-                                        <li>Preencha o <a href="adocao.html" class="fw-bold text-decoration-none">formulário de adoção</a>.</li>
-                                        <li>Aguarde o contato da ONG, que fará a análise do pedido.</li>
-                                        <li>Participe da entrevista e, se aprovado, assine o termo de adoção.</li>
-                                        <li>Busque o seu novo amigo e acompanhe a adaptação.</li>
-                                    </ol>
-                                </section>
-
-                                <!-- Responsabilidades (Estruturado em Cards) -->
-                                <section class="section" aria-labelledby="t-resp">
-                                    <h2 id="t-resp" class="h4 text-primary mb-4 border-bottom pb-2">Responsabilidades</h2>
-                                    
-                                    <article class="mb-4">
-                                        <h3 class="h6 fw-bold text-dark">Do adotante</h3>
-                                        <p class="text-secondary">Cuidar do animal por toda a vida, mantê-lo vacinado e vermifugado, nunca abandoná-lo e avisar a ONG em caso de problemas na adaptação.</p>
-                                    </article>
-                                    
-                                    <article class="mb-4">
-                                        <h3 class="h6 fw-bold text-dark">Da ONG ou protetor</h3>
-                                        <p class="text-secondary">Informar com clareza a saúde e o comportamento do animal, avaliar os pedidos com critério e conduzir a entrega de forma responsável.</p>
-                                    </article>
-                                    
-                                    <article>
-                                        <h3 class="h6 fw-bold text-dark">Do Lar&amp;Patas</h3>
-                                        <p class="text-secondary">Manter as informações da plataforma atualizadas, proteger os dados enviados nos formulários e encaminhar os pedidos às ONGs.</p>
-                                    </article>
-                                </section>
-
+                        <!-- Aviso Importante -->
+                        <section class="alert alert-warning d-flex align-items-center mb-5" aria-labelledby="t-aviso">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-3" viewBox="0 0 16 16">
+                                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <div>
+                                <h2 id="t-aviso" class="h5 alert-heading mb-1 fw-bold">Importante</h2>
+                                <p class="mb-0 text-dark">O Lar&amp;Patas atua <strong>apenas como intermediador</strong>. A análise do pedido, a entrevista e a entrega do animal são de responsabilidade exclusiva da ONG ou protetor responsável por ele.</p>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+
+                        <!-- Papel da Plataforma -->
+                        <section class="section mb-5" aria-labelledby="t-papel">
+                            <h2 id="t-papel" class="h4 text-primary mb-3">O que o Lar&amp;Patas faz</h2>
+                            <ul class="lista-politica lh-lg text-secondary">
+                                <li>Divulga os animais disponíveis das ONGs parceiras.</li>
+                                <li>Recebe o formulário de interesse e o encaminha à ONG responsável.</li>
+                                <li>Permite que você acompanhe o status do pedido no seu perfil.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Requisitos do Adotante -->
+                        <section class="section mb-5" aria-labelledby="t-quem">
+                            <h2 id="t-quem" class="h4 text-primary mb-3">Quem pode adotar</h2>
+                            <ul class="lista-politica lh-lg text-secondary mb-3">
+                                <li>Pessoas maiores de 18 anos, com documento de identidade.</li>
+                                <li>Quem tem condições de oferecer alimentação, cuidados veterinários e um ambiente seguro ao animal.</li>
+                                <li>Quem concorda em assinar o termo de adoção da ONG responsável.</li>
+                            </ul>
+                            <p class="fst-italic text-muted"><small>* Cada ONG pode ter critérios adicionais, informados durante o contato.</small></p>
+                        </section>
+
+                        <!-- Passo a Passo -->
+                        <section class="section mb-5" aria-labelledby="t-etapas">
+                            <h2 id="t-etapas" class="h4 text-primary mb-3">Etapas da adoção</h2>
+                            <ol class="lista-etapas lh-lg text-secondary">
+                                <li>Escolha um pet na <a href="conheca-pets.html" class="fw-bold text-decoration-none">vitrine</a>.</li>
+                                <li>Preencha o <a href="adocao.html" class="fw-bold text-decoration-none">formulário de adoção</a>.</li>
+                                <li>Aguarde o contato da ONG, que fará a análise do pedido.</li>
+                                <li>Participe da entrevista e, se aprovado, assine o termo de adoção.</li>
+                                <li>Busque o seu novo amigo e acompanhe a adaptação.</li>
+                            </ol>
+                        </section>
+
+                        <!-- Responsabilidades -->
+                        <section class="section" aria-labelledby="t-resp">
+                            <h2 id="t-resp" class="h4 text-primary mb-4 border-bottom pb-2">Responsabilidades</h2>
+                            
+                            <article class="mb-4">
+                                <h3 class="h6 fw-bold text-dark">Do adotante</h3>
+                                <p class="text-secondary">Cuidar do animal por toda a vida, mantê-lo vacinado e vermifugado, nunca abandoná-lo e avisar a ONG em caso de problemas na adaptação.</p>
+                            </article>
+                            
+                            <article class="mb-4">
+                                <h3 class="h6 fw-bold text-dark">Da ONG ou protetor</h3>
+                                <p class="text-secondary">Informar com clareza a saúde e o comportamento do animal, avaliar os pedidos com critério e conduzir a entrega de forma responsável.</p>
+                            </article>
+                            
+                            <article>
+                                <h3 class="h6 fw-bold text-dark">Do Lar&amp;Patas</h3>
+                                <p class="text-secondary">Manter as informações da plataforma atualizadas, proteger os dados enviados nos formulários e encaminhar os pedidos às ONGs.</p>
+                            </article>
+                        </section>
+
+                    </article>
                 </main>
             </div>
         </section>
 
+        <!-- Rodapé -->
         <footer class="footer">
-            <img class="footer-logo" src="Midias/home/logo.png" alt="Lar&amp;Patas">
             <div class="footer-cols">
-                <div>
-                    <h2>Fale conosco</h2>
-                    <p>Entre em contato para mais informações sobre adoção e voluntariado.</p>
-                    <a class="btn btn-primary" href="contato.html">Fale conosco</a>
-                </div>
+            <section class="footer-marca" aria-label="Lar&amp;Patas">
+                    <img class="footer-logo" src="Midias/home/logo.png" alt="Lar&amp;Patas">
+                    <p>Conectando lares e patinhas. Um novo começo nasce de um encontro.</p>
+                    <ul class="redes" aria-label="Redes sociais">
+                        <li>
+                            <a href="https://www.facebook.com/larepatas" target="_blank" rel="noopener noreferrer" aria-label="Facebook do Lar&amp;Patas">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M13 21v-8h3l.5-3.5H13V7.8c0-1 .3-1.7 1.8-1.7h1.8V3.1C16.3 3 15.2 3 14 3c-2.6 0-4.3 1.6-4.3 4.4v2.1H7V13h2.7v8H13z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/lar_e_patas" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Lar&amp;Patas">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@larepatas" target="_blank" rel="noopener noreferrer" aria-label="YouTube do Lar&amp;Patas">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="3.5"/><polygon points="10,9 15,12 10,15" fill="currentColor" stroke="none"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
                 <nav aria-label="Links rápidos">
-                    <h2>Links rápidos</h2>
+                    <h2>Links Rápidos</h2>
                     <ul>
-                        <li><a href="como-funciona.html">Como funciona</a></li>
-                        <li><a href="sobre.html">Quem somos</a></li>
-                        <li><a href="index.html#historias">Histórias de adoção</a></li>
-                        <li><a href="ongs.html">ONGs parceiras</a></li>
+                        <li><a href="conheca-pets.html">Adote Agora</a></li>
+                        <li><a href="pets.html">Encontre seu Pet</a></li>
+                        <li><a href="como-funciona.html">Como Funciona</a></li>
+                        <li><a href="contato.html">Fale Conosco</a></li>
                     </ul>
                 </nav>
-                <div>
-                    <h2>Redes sociais</h2>
-                    <p>@lar&amp;patas</p>
-                </div>
+
+                <nav aria-label="Sobre o Lar&amp;Patas">
+                    <h2>Lar&amp;Patas</h2>
+                    <ul>
+                        <li><a href="sobre.html">Quem Somos</a></li>
+                        <li><a href="missao.html">Nossa Missão</a></li>
+                        <li><a href="ongs.html">ONGs Parceiras</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                    </ul>
+                </nav>
             </div>
+
             <p class="copy">&copy; <span id="ano">2026</span> Lar&amp;Patas. Todos os direitos reservados.</p>
         </footer>
 
